@@ -1,0 +1,26 @@
+# Old Squarespace URLs
+/how-to-book              /how-it-works/               301
+/how-to-book/             /how-it-works/               301
+/book-now                 /contact/                    301
+/book-now/                /contact/                    301
+/our-methods              /how-it-works/               301
+/our-methods/             /how-it-works/               301
+/howtorevise              /revision-tips/              301
+/howtorevise/             /revision-tips/              301
+/howtorevise/*            /revision-tips/:splat/       301
+/cart                     /                            301
+
+# Short subject paths
+/maths                    /online-a-level-maths-tutor/          301
+/further-maths            /online-a-level-further-maths-tutor/  301
+/biology                  /online-a-level-biology-tutor/        301
+/chemistry                /online-a-level-chemistry-tutor/      301
+/physics                  /online-a-level-physics-tutor/        301
+/psychology               /online-a-level-psychology-tutor/     301
+/economics                /online-a-level-economics-tutor/      301
+/sociology                /online-a-level-sociology-tutor/      301
+/geography                /online-a-level-geography-tutor/      301
+/english                  /online-a-level-english-tutor/        301
+
+# Apex to www
+https://aleveltutors.online/*  https://www.aleveltutors.online/:splat  301!

@@ -1,0 +1,14 @@
+---
+import { host, joinList } from '../lib';
+const { s } = Astro.props;
+---
+<article class="card subject-card">
+  <h3><a href={`/${s.page}/`}>A-level {s.name}</a></h3>
+  <div class="tags">{s.boards.map((b: any) => <span class="tag">{b.short}</span>)}</div>
+  <p>{s.blurb}</p>
+  <div class="tutor-line">Tutor{s.tutors.length > 1 ? 's' : ''}: <strong>{joinList(s.tutors)}</strong></div>
+  <div class="links">
+    <a href={`/${s.page}/`}>Tutoring</a>
+    <a href={`${s.site}/`}>{s.external ? host(s.site) : 'Free revision site'} ↗</a>
+  </div>
+</article>

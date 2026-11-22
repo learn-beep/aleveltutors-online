@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import SubjectCard from '../components/SubjectCard.astro';
+import LeadBlock from '../components/LeadBlock.astro';
+import subjects from '../data/subjects.json';
+---
+<Base title="A-level Subjects We Tutor Online | aleveltutors.online" description={`Online A-level tutors for ${subjects.map((s) => s.name).join(', ')}. Specialist teachers for AQA, OCR, Edexcel, Eduqas and Cambridge specifications.`}>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Subjects</div>
+      <h1>A-level subjects we tutor</h1>
+      <p>{subjects.length} subjects, each taught by a specialist A-level teacher and backed by a free revision site for your exam board.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap grid grid-3">
+      {subjects.map((s) => <SubjectCard s={s} />)}
+    </div>
+  </section>
+  <LeadBlock text="Don’t see your subject or board? Ask anyway: our Partner Tutors network covers more A-level and GCSE subjects." />
+</Base>

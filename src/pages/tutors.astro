@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadBlock from '../components/LeadBlock.astro';
+import subjects from '../data/subjects.json';
+import { host, joinList } from '../lib';
+const rows = subjects.flatMap((s) => s.tutors.map((t) => ({ t, s })));
+---
+<Base title="Our Online A-level Tutors | aleveltutors.online" description="Meet our online A-level tutors: experienced A-level teachers and examiners in Maths, Further Maths, Biology, Chemistry, Physics, Psychology, Economics, Sociology, Geography and English.">
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Tutors</div>
+      <h1>Our A-level tutors</h1>
+      <p>Every tutor is an experienced A-level teacher. Most have taught A level for over 25 years, and many have been examiners.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="grid grid-3">
+        {rows.map(({ t, s }) => (
+          <article class="card subject-card">
+            <h3>{t}</h3>
+            <div class="tags"><span class="tag">A-level {s.name}</span>{s.boards.map((b) => <span class="tag">{b.short}</span>)}</div>
+            <p>Teaches A-level {s.name} for {joinList(s.boards.map((b) => b.board))}.</p>
+            <div class="links">
+              <a href={s.tutorUrl ?? `${s.site}/tutors/`}>Profile ↗</a>
+              <a href={`/${s.page}/`}>{s.name} tutoring</a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="muted" style="margin-top:22px">Full profiles, including teaching and examining experience, are on each subject’s revision site.</p>
+    </div>
+  </section>
+  <LeadBlock />
+</Base>

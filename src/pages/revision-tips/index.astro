@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import LeadBlock from '../../components/LeadBlock.astro';
+import { posts } from '../../data/posts';
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title="How to Revise for A Level: Evidence-Based Revision Tips | aleveltutors.online" description="Revision tips for A-level students based on psychology and education research: retrieval practice, making connections and effortful thinking.">
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Revision tips</div>
+      <h1>How to revise for A level</h1>
+      <p>Short, practical guides to revising well, based on what memory research says actually works.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap narrow">
+      <div class="post-list">
+        {posts.map((p) => (
+          <a class="card" href={`/revision-tips/${p.slug}/`}>
+            <h2>{p.title}</h2>
+            <div class="meta">{p.author} · {fmt(p.date)}</div>
+            <p>{p.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <LeadBlock heading="Want help putting this into practice?" text="Our tutors build retrieval practice and past-paper questions into every lesson. Tell us your subject and exam board." />
+</Base>

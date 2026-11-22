@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadBlock from '../components/LeadBlock.astro';
+import subjects from '../data/subjects.json';
+import { host } from '../lib';
+const sites = subjects.filter((s) => !s.external);
+const list = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  itemListElement: sites.flatMap((s) => s.boards.map((b) => `${s.site}${b.path}`)).map((u, i) => ({ '@type': 'ListItem', position: i + 1, url: u })),
+};
+---
+<Base title="Free A-level Past Paper Questions by Topic, Every Subject | aleveltutors.online" description="Free A-level revision sites: past-paper questions by topic with mark schemes and examiner comments for Maths, Further Maths, Chemistry, Physics, Psychology, Economics, Sociology, Geography and English." schema={[list]}>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Free revision</div>
+      <h1>Free A-level past-paper questions by topic</h1>
+      <p>Every question from recent past papers, sorted by specification topic, with the mark scheme and examiner comments beside it. No sign-up, no adverts.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="table-wrap">
+        <table class="stack">
+          <thead><tr><th>Subject</th><th>Exam board</th><th>Specification</th><th>Revision site</th></tr></thead>
+          <tbody>
+            {sites.flatMap((s) => s.boards.map((b, i) => (
+              <tr>
+                <td data-label="Subject">{i === 0 ? <strong>{s.name}</strong> : ''}</td>
+                <td data-label="Exam board">{b.board}</td>
+                <td data-label="Specification">{b.codes}</td>
+                <td data-label="Revision site"><a href={`${s.site}${b.path}`}>{host(s.site)}{b.path === '/' ? '' : b.path.replace(/\/$/, '')} ↗</a></td>
+              </tr>
+            )))}
+          </tbody>
+        </table>
+      </div>
+      <h2 style="margin-top:40px">What each site has</h2>
+      <div class="features">
+        <div><h3>Questions by topic</h3><p>Every past-paper question part filed under its specification topic, so you can practise one topic at a time.</p></div>
+        <div><h3>Mark schemes and examiner comments</h3><p>The mark scheme and what examiners said about real answers, next to each question.</p></div>
+        <div><h3>Past papers and mocks</h3><p>Papers by series, and a mock builder that puts together a fresh paper from real questions.</p></div>
+        <div><h3>Specification checklist</h3><p>Every specification point with its questions, so you can track what you’ve covered.</p></div>
+      </div>
+      <p class="muted" style="margin-top:22px">A-level Biology resources and group masterclasses are on <a href="https://www.alevelbiologytutor.com/">alevelbiologytutor.com</a>.</p>
+    </div>
+  </section>
+  <LeadBlock heading="Stuck on a topic?" text="Our tutors wrote and checked these sites. One-to-one lessons go through the questions you find hardest." />
+</Base>

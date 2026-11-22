@@ -1,0 +1,8 @@
+---
+const { r } = Astro.props;
+---
+<figure class="card review">
+  <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+  <blockquote>{r.text}</blockquote>
+  <footer>{r.name}, A-level {r.subject} · Google review</footer>
+</figure>

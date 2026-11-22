@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadBlock from '../components/LeadBlock.astro';
+import subjects from '../data/subjects.json';
+---
+<Base title="About aleveltutors.online | Online A-level Tuition from Winchester" description="aleveltutors.online was set up by Tom Whitburn, an A-level Biology teacher with nearly 30 years of sixth form experience, to bring together specialist A-level teachers online.">
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">About</div>
+      <h1>About aleveltutors.online</h1>
+      <p>Specialist A-level teachers, online, one subject each.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <p>aleveltutors.online was set up by Tom Whitburn, who has taught A-level Biology in sixth form colleges for nearly 30 years and runs <a href="https://www.alevelbiologytutor.com/">alevelbiologytutor.com</a>. aleveltutors.online brings together a small group of experienced A-level teachers, each teaching the subject they know best.</p>
+      <h2>Experience matters</h2>
+      <p>Some A-level teachers teach one A-level class a year alongside other year groups. Our tutors have spent their careers teaching A level. They know how students build up knowledge of the subject, the mistakes they usually make, and the teaching that works. They advise on exam language and command words, and keep up with changes to the specifications and to what we know about learning.</p>
+      <h2>A modern approach</h2>
+      <p>Lessons use good audio and video and online tools that let tutor and student work on the same diagrams, slides and exam questions in real time. Every lesson is recorded and can be streamed again from a private archive.</p>
+      <h2>Free revision for everyone</h2>
+      <p>Alongside the tutoring we build a free revision site for every subject we teach, {subjects.length} so far, with past-paper questions sorted by topic, mark schemes and examiner comments. They are free to use, with no sign-up and no adverts. <a href="/free-revision/">See them all</a>.</p>
+    </div>
+  </section>
+  <LeadBlock />
+</Base>

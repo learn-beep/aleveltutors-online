@@ -1,0 +1,24 @@
+---
+import WaIcon from './WaIcon.astro';
+import { waGeneral } from '../lib';
+interface Props { heading?: string; text?: string; wa?: string; }
+const {
+  heading = 'Find the right tutor',
+  text = 'Tell us the subject, exam board and year group. Tom reads every message himself and matches you with a specialist A-level teacher for that board.',
+  wa = waGeneral(),
+} = Astro.props;
+---
+<section class="block">
+  <div class="wrap">
+    <div class="lead-block">
+      <div>
+        <h2>{heading}</h2>
+        <p>{text}</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-wa" href={wa}><WaIcon /> WhatsApp us</a>
+        <a class="btn btn-primary" href="/contact/">Send an enquiry</a>
+      </div>
+    </div>
+  </div>
+</section>

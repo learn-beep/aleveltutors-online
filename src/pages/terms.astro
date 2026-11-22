@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+---
+<Base title="Terms | aleveltutors.online" description="Terms of use and tutoring terms for aleveltutors.online.">
+  <section class="page-head"><div class="wrap"><h1>Terms</h1></div></section>
+  <section class="block"><div class="wrap prose">
+    <h2>Who we are</h2>
+    <p>This website is run by {site.company}, a company registered in England and Wales, company number {site.companyNumber}. Registered office: {site.office}. Email: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+    <h2>Lessons</h2>
+    <p>Lessons are one-to-one and online. A card secures each booking and is charged after the lesson. Lessons can be rescheduled in advance, and you can stop at any time. Your tutor will confirm the fee and the notice needed to move or cancel a lesson before your first lesson.</p>
+    <h2>Recordings</h2>
+    <p>Lessons are recorded so the student can watch them again. Recordings are kept in a private archive for the student’s use and are not shared with anyone else.</p>
+    <h2>Website content</h2>
+    <p>The articles on this site are our own. Our free revision sites link to and quote exam board material for study purposes; that material remains the property of the exam boards.</p>
+  </div></section>
+</Base>

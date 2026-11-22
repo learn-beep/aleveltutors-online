@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+---
+<Base title="Privacy | aleveltutors.online" description="How aleveltutors.online uses the information you send us.">
+  <section class="page-head"><div class="wrap"><h1>Privacy</h1></div></section>
+  <section class="block"><div class="wrap prose">
+    <p>{site.company} is the data controller for information you send through this website.</p>
+    <h2>What we collect</h2>
+    <p>Only what you send us: your name, email, phone number if given, and the details in your enquiry or WhatsApp message. This site has no analytics, no advertising and no tracking cookies.</p>
+    <h2>How we use it</h2>
+    <p>To reply to your enquiry and arrange lessons with the right tutor. We share your details only with the tutor who will teach you. Enquiry forms are processed by our web host, Netlify.</p>
+    <h2>How long we keep it</h2>
+    <p>We keep enquiries only as long as we need them to arrange lessons, and student records only while lessons continue and for as long as we need them for our accounts.</p>
+    <h2>Your rights</h2>
+    <p>You can ask to see, correct or delete your information at any time by emailing <a href={`mailto:${site.email}`}>{site.email}</a>. You can also complain to the Information Commissioner’s Office (ico.org.uk).</p>
+  </div></section>
+</Base>

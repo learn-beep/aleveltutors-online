@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import LeadBlock from '../../components/LeadBlock.astro';
+import { posts } from '../../data/posts';
+import site from '../../data/site.json';
+export function getStaticPaths() {
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const others = posts.filter((x) => x.slug !== p.slug);
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const article = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: p.title, description: p.description, datePublished: p.date,
+  author: { '@type': 'Person', name: p.author, url: p.authorUrl },
+  publisher: { '@id': `${site.url}/#org` },
+  mainEntityOfPage: `${site.url}/revision-tips/${p.slug}/`,
+};
+---
+<Base title={`${p.title} | A-level revision tips`} description={p.description} schema={[article]} ogType="article">
+  <section class="page-head">
+    <div class="wrap narrow">
+      <div class="crumbs"><a href="/revision-tips/">Revision tips</a></div>
+      <h1>{p.title}</h1>
+      <p>By {p.authorUrl ? <a href={p.authorUrl} style="color:#fff">{p.author}</a> : p.author} · {fmt(p.date)}</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <article class="prose">
+        <Fragment set:html={p.body} />
+        <div class="nutshell">
+          <h3>In a nutshell</h3>
+          <ul>{p.nutshell.map((n) => <li>{n}</li>)}</ul>
+        </div>
+      </article>
+      <h2 style="margin-top:44px">More revision tips</h2>
+      <div class="grid grid-2">
+        {others.map((o) => <a class="card" href={`/revision-tips/${o.slug}/`} style="text-decoration:none;color:inherit"><h3>{o.title}</h3><p class="muted" style="margin:0">{o.description}</p></a>)}
+      </div>
+    </div>
+  </section>
+  <LeadBlock heading="Revise with a specialist" text="Our tutors build retrieval practice and past-paper questions into every lesson. Tell us your subject and exam board." />
+</Base>
