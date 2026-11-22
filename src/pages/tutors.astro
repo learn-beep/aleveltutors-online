@@ -21,6 +21,7 @@ const rows = subjects.flatMap((s) => s.tutors.map((t) => ({ t, s })));
             <h3>{t}</h3>
             <div class="tags"><span class="tag">A-level {s.name}</span>{s.boards.map((b) => <span class="tag">{b.short}</span>)}</div>
             <p>Teaches A-level {s.name} for {joinList(s.boards.map((b) => b.board))}.</p>
+            {s.fee && <p><strong>{s.fee}</strong></p>}
             <div class="links">
               <a href={s.tutorUrl ?? `${s.site}/tutors/`}>Profile ↗</a>
               <a href={`/${s.page}/`}>{s.name} tutoring</a>

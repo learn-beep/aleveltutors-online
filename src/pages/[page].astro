@@ -80,6 +80,7 @@ const crumbs = {
       <div>
         <h2>Your tutor</h2>
         <p>A-level {s.name} is taught by <strong>{joinList(s.tutors)}</strong>{s.slug === 'biology' ? ' Whitburn, who founded aleveltutors.online' : ''}, an experienced A-level teacher who knows the {joinList(boardNames)} {s.boards.length > 1 ? 'specifications' : 'specification'} and how examiners mark them.</p>
+        {s.fee && <p><strong>Fee:</strong> {s.fee}, online and one-to-one. Card charged after each lesson.</p>}
         <p><a href={s.tutorUrl ?? `${s.site}/tutors/`}>Read more about {s.tutors.length > 1 ? 'the tutors' : s.tutors[0]} ↗</a></p>
       </div>
       <div>
