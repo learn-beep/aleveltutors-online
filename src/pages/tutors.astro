@@ -6,7 +6,7 @@ import { joinList, acuityUrl, teamStats } from '../lib';
 const rows = subjects.flatMap((s: any) => s.tutors.map((t: string) => ({ t, s, info: s.tutorInfo?.[t], id: s.acuity?.[t] })));
 const { tutors, examiners, heads } = teamStats();
 ---
-<Base title="Our Online A-level Tutors: Teachers, Examiners and Heads of Department | aleveltutors.online" description={`Meet our ${tutors} online tutors: experienced A-level specialists, ${examiners} current or former exam board examiners and ${heads} heads of department.`}>
+<Base title="Our Online A-level Tutors: Teachers and Examiners" description={`Meet our ${tutors} online tutors: experienced A-level specialists, ${examiners} current or former exam board examiners and ${heads} heads of department.`}>
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Tutors</div>
@@ -16,6 +16,7 @@ const { tutors, examiners, heads } = teamStats();
   </section>
   <section class="block">
     <div class="wrap">
+      <h2 class="sr-only">All tutors</h2>
       <div class="grid grid-3">
         {rows.map(({ t, s, info, id }) => (
           <article class="card subject-card">

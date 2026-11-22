@@ -48,7 +48,7 @@ const cards = s.tutors.map((t) => ({ t, id: acu[t] }));
 const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after each lesson. ` : '';
 ---
 <Base
-  title={`Online ${s.label} Tutor | ${joinList(boardNames)} | aleveltutors.online`}
+  title={[`Online ${s.label} Tutor | ${joinList(boardNames)} | aleveltutors.online`, `Online ${s.label} Tutor | ${joinList(boardNames)}`, `Online ${s.label} Tutor | aleveltutors.online`, `Online ${s.label} Tutor`].find((t) => t.length <= 65)}
   description={`One-to-one online ${s.label} tutoring for ${joinList(boardNames)} with ${joinList(s.tutors)}. ${feeLine}Every lesson recorded.`}
   schema={[service, crumbs]}
 >

@@ -12,7 +12,8 @@ interface Props {
   noindex?: boolean;
   ogType?: string;
 }
-const { title, description, schema = [], noindex = false, ogType = 'website' } = Astro.props;
+const { title: rawTitle, description, schema = [], noindex = false, ogType = 'website' } = Astro.props;
+const title = rawTitle.length > 65 ? rawTitle.replace(/ \| aleveltutors\.online$/, '') : rawTitle;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const path = Astro.url.pathname;
 const nav = [

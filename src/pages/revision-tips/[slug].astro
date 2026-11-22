@@ -17,7 +17,7 @@ const article = {
   mainEntityOfPage: `${site.url}/revision-tips/${p.slug}/`,
 };
 ---
-<Base title={`${p.title} | A-level revision tips`} description={p.description} schema={[article]} ogType="article">
+<Base title={`${p.title} | A-level revision`.length > 65 ? p.title : `${p.title} | A-level revision`} description={p.description} schema={[article]} ogType="article">
   <section class="page-head">
     <div class="wrap narrow">
       <div class="crumbs"><a href="/revision-tips/">Revision tips</a></div>

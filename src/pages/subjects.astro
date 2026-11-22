@@ -4,7 +4,7 @@ import SubjectCard from '../components/SubjectCard.astro';
 import LeadBlock from '../components/LeadBlock.astro';
 import subjects from '../data/subjects.json';
 ---
-<Base title="A-level Subjects We Tutor Online | aleveltutors.online" description={`Online A-level tutors for ${subjects.filter((s) => s.level !== 'GCSE').map((s) => s.name).join(', ')}, plus GCSE Biology and Science. Specialist teachers for AQA, OCR, Edexcel, Eduqas and Cambridge specifications.`}>
+<Base title="A-level Subjects We Tutor Online | aleveltutors.online" description="Online A-level tutors in Maths, the Sciences, Psychology, Economics, Sociology, Geography, English, Law and more, for AQA, OCR, Edexcel and Eduqas.">
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Subjects</div>
@@ -13,6 +13,7 @@ import subjects from '../data/subjects.json';
     </div>
   </section>
   <section class="block">
+    <h2 class="sr-only">All subjects</h2>
     <div class="wrap grid grid-3">
       {subjects.map((s) => <SubjectCard s={s} />)}
     </div>
