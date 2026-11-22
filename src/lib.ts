@@ -13,3 +13,5 @@ export function waGeneral() {
 
 export const host = (u: string) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 export const joinList = (a: string[]) => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+
+export const acuityUrl = (id: number) => `https://app.acuityscheduling.com/schedule.php?owner=24708936&appointmentType=${id}`;

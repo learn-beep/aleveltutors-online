@@ -6,7 +6,7 @@ import WaIcon from '../components/WaIcon.astro';
 import subjects from '../data/subjects.json';
 import reviews from '../data/reviews.json';
 import site from '../data/site.json';
-import { waLink, host, joinList } from '../lib';
+import { waLink, host, joinList, acuityUrl } from '../lib';
 
 export function getStaticPaths() {
   return subjects.map((s) => ({ params: { page: s.page }, props: { s } }));
@@ -14,40 +14,43 @@ export function getStaticPaths() {
 const { s } = Astro.props;
 const boardNames = s.boards.map((b) => b.short);
 const wa = s.whatsapp ?? (s.boards.length === 1 ? waLink(s.boards[0].short, s.name) : waLink('', s.name));
+const isGcse = s.level === 'GCSE';
+const book = Object.entries(s.acuity ?? {}) as [string, number][];
+const specHead = isGcse ? 'Specification' : 'Specification (A level / AS)';
 const mine = reviews.filter((r) => r.subject.includes(s.name));
 const others = subjects.filter((x) => x.slug !== s.slug);
 const service = {
   '@context': 'https://schema.org', '@type': 'Service',
-  name: `Online A-level ${s.name} tutoring`,
+  name: `Online ${s.label} tutoring`,
   serviceType: 'Tutoring',
   provider: { '@id': `${site.url}/#org` },
   areaServed: 'GB',
-  description: `One-to-one online A-level ${s.name} tutoring for ${joinList(s.boards.map((b) => b.board))}.`,
+  description: `One-to-one online ${s.label} tutoring for ${joinList(s.boards.map((b) => b.board))}.`,
   url: `${site.url}/${s.page}/`,
 };
 const crumbs = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Subjects', item: `${site.url}/subjects/` },
-    { '@type': 'ListItem', position: 2, name: `A-level ${s.name} tutor`, item: `${site.url}/${s.page}/` },
+    { '@type': 'ListItem', position: 2, name: `${s.label} tutor`, item: `${site.url}/${s.page}/` },
   ],
 };
 ---
 <Base
-  title={`Online A-level ${s.name} Tutor | ${joinList(boardNames)} | aleveltutors.online`}
-  description={`One-to-one online A-level ${s.name} tutoring for ${joinList(boardNames)} from an experienced A-level teacher. Recorded lessons and a free ${s.name} revision site.`}
+  title={`Online ${s.label} Tutor | ${joinList(boardNames)} | aleveltutors.online`}
+  description={`One-to-one online ${s.label} tutoring for ${joinList(boardNames)} from an experienced teacher. Book online, lessons recorded${s.site ? `, and a free ${s.name} revision site` : ''}.`}
   schema={[service, crumbs]}
 >
   <section class="page-head">
     <div class="wrap">
       <div class="crumbs"><a href="/subjects/">Subjects</a> › {s.name}</div>
-      <h1>Online A-level {s.name} tutor</h1>
+      <h1>Online {s.label} tutor</h1>
       <p>{s.blurb}</p>
       <div class="btn-row" style="margin-top:20px">
-        {s.external
-          ? <a class="btn btn-primary" href={`${s.site}/`}>Book on {host(s.site)}</a>
-          : <a class="btn btn-wa" href={wa}><WaIcon /> WhatsApp about {s.name}</a>}
-        <a class="btn btn-ghost" style="color:#fff" href={`${s.site}/`}>Free {s.name} revision ↗</a>
+        {s.external && <a class="btn btn-primary" href={`${s.site}/`}>Book on {host(s.site!)}</a>}
+        {book.map(([t, id]) => <a class="btn btn-primary" href={acuityUrl(id)}>Book with {t}</a>)}
+        {!s.external && <a class="btn btn-wa" href={wa}><WaIcon /> WhatsApp about {s.name}</a>}
+        {s.site && <a class="btn btn-ghost" style="color:#fff" href={`${s.site}/`}>Free {s.name} revision ↗</a>}
       </div>
     </div>
   </section>
@@ -56,17 +59,17 @@ const crumbs = {
     <div class="wrap">
       <div class="section-head">
         <h2>Exam boards we teach</h2>
-        <p class="muted">Lessons follow your exact specification. Each board has its own section of the free revision site with past-paper questions by topic, mark schemes and examiner comments.</p>
+        <p class="muted">Lessons follow your exact specification.{s.site && !s.external && ' Each board has its own section of the free revision site with past-paper questions by topic, mark schemes and examiner comments.'}</p>
       </div>
       <div class="table-wrap">
         <table class="stack">
-          <thead><tr><th>Exam board</th><th>Specification (A level / AS)</th><th>Free revision</th></tr></thead>
+          <thead><tr><th>Exam board</th><th>{specHead}</th>{s.site && <th>Free revision</th>}</tr></thead>
           <tbody>
             {s.boards.map((b) => (
               <tr>
                 <td data-label="Exam board"><strong>{b.board}</strong>{b.note && <div class="muted">{b.note}</div>}</td>
                 <td data-label="Specification">{b.codes}</td>
-                <td data-label="Free revision"><a href={`${s.site}${b.path}`}>{host(s.site)}{b.path === '/' ? '' : b.path.replace(/\/$/, '')} ↗</a></td>
+                {s.site && <td data-label="Free revision"><a href={`${s.site}${b.path}`}>{host(s.site)}{b.path === '/' ? '' : b.path.replace(/\/$/, '')} ↗</a></td>}
               </tr>
             ))}
           </tbody>
@@ -79,9 +82,10 @@ const crumbs = {
     <div class="wrap grid grid-2">
       <div>
         <h2>Your tutor</h2>
-        <p>A-level {s.name} is taught by <strong>{joinList(s.tutors)}</strong>{s.slug === 'biology' ? ' Whitburn, who founded aleveltutors.online' : ''}, an experienced A-level teacher who knows the {joinList(boardNames)} {s.boards.length > 1 ? 'specifications' : 'specification'} and how examiners mark them.</p>
+        <p>{s.label} is taught by <strong>{joinList(s.tutors)}</strong>{s.slug === 'biology' ? ' Whitburn, who founded aleveltutors.online' : ''}, an experienced teacher who knows the {joinList(boardNames)} {s.boards.length > 1 ? 'specifications' : 'specification'} and how examiners mark them.</p>
         {s.fee && <p><strong>Fee:</strong> {s.fee}, online and one-to-one. Card charged after each lesson.</p>}
-        <p><a href={s.tutorUrl ?? `${s.site}/tutors/`}>Read more about {s.tutors.length > 1 ? 'the tutors' : s.tutors[0]} ↗</a></p>
+        {book.length > 0 && <p class="btn-row">{book.map(([t, id]) => <a class="btn btn-primary" href={acuityUrl(id)}>Book a lesson with {t}</a>)}</p>}
+        {(s.tutorUrl || s.site) && <p><a href={s.tutorUrl ?? `${s.site}/tutors/`}>Read more about {s.tutors.length > 1 ? 'the tutors' : s.tutors[0]} ↗</a></p>}
       </div>
       <div>
         <h2>What lessons include</h2>
@@ -106,7 +110,7 @@ const crumbs = {
 
   <LeadBlock
     heading={`Find your ${s.name} tutor`}
-    text={s.external ? `A-level ${s.name} lessons and group masterclasses are booked on ${host(s.site)}.` : `Tell us the exam board, year group and the times that suit you, and we’ll arrange a first lesson with ${joinList(s.tutors)}.`}
+    text={s.external ? `A-level ${s.name} lessons and group masterclasses are booked on ${host(s.site!)}.` : book.length ? `Book a time straight into ${joinList(s.tutors)}’s calendar above, or message us with the exam board, year group and the times that suit you.` : `Tell us the exam board, year group and the times that suit you, and we’ll arrange a first lesson with ${joinList(s.tutors)}.`}
     wa={wa}
   />
 

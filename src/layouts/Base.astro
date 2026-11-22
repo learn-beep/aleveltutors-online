@@ -33,7 +33,7 @@ const org = {
   logo: `${site.url}/favicon-192.png`,
   email: site.email,
   areaServed: 'GB',
-  sameAs: subjects.map((s) => `${s.site}/`),
+  sameAs: subjects.filter((s) => s.site).map((s) => `${s.site}/`),
 };
 ---
 <!doctype html>
@@ -81,19 +81,19 @@ const org = {
       <div class="footer-grid">
         <div>
           <h3>aleveltutors.online</h3>
-          <p>Online one-to-one A-level tuition from experienced A-level teachers, and free revision sites for every subject we teach.</p>
+          <p>Online one-to-one A-level tuition from experienced A-level teachers, and free revision sites for most of the subjects we teach.</p>
           <p><a href={waGeneral()}>WhatsApp us</a> · <a href={`mailto:${site.email}`}>{site.email}</a></p>
         </div>
         <div>
           <h3>Tutoring</h3>
           <ul>
-            {subjects.map((s) => <li><a href={`/${s.page}/`}>A-level {s.name} tutor</a></li>)}
+            {subjects.map((s) => <li><a href={`/${s.page}/`}>{s.label} tutor</a></li>)}
           </ul>
         </div>
         <div>
           <h3>Free revision sites</h3>
           <ul>
-            {subjects.map((s) => <li><a href={`${s.site}/`}>{host(s.site)}</a></li>)}
+            {subjects.filter((s) => s.site).map((s) => <li><a href={`${s.site}/`}>{host(s.site!)}</a></li>)}
           </ul>
         </div>
         <div>

@@ -22,7 +22,11 @@
       }
     ],
     "blurb": "Pure, statistics and mechanics, taught step by step with exam-style questions every lesson.",
-    "fee": "£75 for a 45-minute lesson"
+    "fee": "£75 for a 45-minute lesson",
+    "label": "A-level Maths",
+    "acuity": {
+      "Tania": 29639314
+    }
   },
   {
     "slug": "further-maths",
@@ -42,7 +46,11 @@
       }
     ],
     "blurb": "Core Pure and every Edexcel option, for students aiming at top grades and STEP-style problem solving.",
-    "fee": "£110 an hour"
+    "fee": "£110 an hour",
+    "label": "A-level Further Maths",
+    "acuity": {
+      "Emma": 45916420
+    }
   },
   {
     "slug": "biology",
@@ -75,7 +83,8 @@
     ],
     "blurb": "One-to-one lessons and weekly group masterclasses with Tom Whitburn, who has taught A-level Biology for nearly 30 years.",
     "tutorUrl": "https://www.alevelbiologytutor.com/who-am-i",
-    "whatsapp": "https://wa.me/447941014339"
+    "whatsapp": "https://wa.me/447941014339",
+    "label": "A-level Biology"
   },
   {
     "slug": "chemistry",
@@ -106,7 +115,8 @@
       }
     ],
     "blurb": "Calculations, mechanisms and six-mark answers, with past-paper practice sorted by topic.",
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "label": "A-level Chemistry"
   },
   {
     "slug": "physics",
@@ -137,7 +147,11 @@
       }
     ],
     "blurb": "Concepts, required practicals and the maths behind them, with exam questions marked the way examiners mark.",
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "label": "A-level Physics",
+    "acuity": {
+      "Rosey": 91663730
+    }
   },
   {
     "slug": "psychology",
@@ -156,7 +170,11 @@
       }
     ],
     "blurb": "Research methods, AO3 evaluation and 16-mark essays, planned and marked against the AQA levels.",
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "label": "A-level Psychology",
+    "acuity": {
+      "Andy": 29790068
+    }
   },
   {
     "slug": "economics",
@@ -175,7 +193,11 @@
       }
     ],
     "blurb": "Diagrams, data response and 25-mark essays, with weekly essays marked and discussed in the next lesson.",
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "label": "A-level Economics",
+    "acuity": {
+      "Liane": 60019385
+    }
   },
   {
     "slug": "sociology",
@@ -194,7 +216,11 @@
       }
     ],
     "blurb": "Theories, studies and essay structure for every AQA paper, with resources for each topic.",
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "label": "A-level Sociology",
+    "acuity": {
+      "Mark": 32727970
+    }
   },
   {
     "slug": "geography",
@@ -220,7 +246,12 @@
       }
     ],
     "blurb": "Physical and human geography, case studies, skills questions and the NEA.",
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "label": "A-level Geography",
+    "acuity": {
+      "Lauren": 55161647,
+      "Glenda": 95443535
+    }
   },
   {
     "slug": "english",
@@ -245,6 +276,79 @@
       }
     ],
     "blurb": "Close analysis, set texts and essay writing for AQA English Language and Literature A.",
+    "fee": "£100 an hour",
+    "label": "A-level English",
+    "acuity": {
+      "Isobel": 73643156
+    }
+  },
+  {
+    "slug": "law",
+    "name": "Law",
+    "label": "A-level Law",
+    "page": "online-a-level-law-tutor",
+    "tutors": [
+      "Sue"
+    ],
+    "boards": [
+      {
+        "board": "OCR",
+        "short": "OCR",
+        "codes": "H418 / H018"
+      },
+      {
+        "board": "AQA",
+        "short": "AQA",
+        "codes": "7162 / 7161"
+      }
+    ],
+    "blurb": "Taught by a qualified solicitor with 25 years of A-level Law teaching in a sixth form college.",
+    "acuity": {
+      "Sue": 100276466
+    },
+    "fee": "£100 an hour"
+  },
+  {
+    "slug": "environmental-science",
+    "name": "Environmental Science",
+    "label": "A-level Environmental Science",
+    "page": "online-a-level-environmental-science-tutor",
+    "tutors": [
+      "Oliver"
+    ],
+    "boards": [
+      {
+        "board": "AQA",
+        "short": "AQA",
+        "codes": "7447 / 7446"
+      }
+    ],
+    "blurb": "Taught by an AQA examiner who has taught the subject in a top sixth form college for many years.",
+    "acuity": {
+      "Oliver": 67395215
+    },
+    "fee": "£100 an hour"
+  },
+  {
+    "slug": "gcse-biology",
+    "name": "GCSE Biology and Science",
+    "label": "GCSE Biology and Science",
+    "level": "GCSE",
+    "page": "online-gcse-biology-tutor",
+    "tutors": [
+      "Sam"
+    ],
+    "boards": [
+      {
+        "board": "Any GCSE or IGCSE board",
+        "short": "GCSE / IGCSE",
+        "codes": "All specifications"
+      }
+    ],
+    "blurb": "GCSE Biology and combined Science with an A-level Biology teacher who taught GCSE Science for many years.",
+    "acuity": {
+      "Sam": 58661818
+    },
     "fee": "£100 an hour"
   }
 ]

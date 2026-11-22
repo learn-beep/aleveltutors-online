@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import LeadBlock from '../components/LeadBlock.astro';
 import subjects from '../data/subjects.json';
-import { host, joinList } from '../lib';
+import { host, joinList, acuityUrl } from '../lib';
 const rows = subjects.flatMap((s) => s.tutors.map((t) => ({ t, s })));
 ---
 <Base title="Our Online A-level Tutors | aleveltutors.online" description="Meet our online A-level tutors: experienced A-level teachers and examiners in Maths, Further Maths, Biology, Chemistry, Physics, Psychology, Economics, Sociology, Geography and English.">
@@ -19,11 +19,12 @@ const rows = subjects.flatMap((s) => s.tutors.map((t) => ({ t, s })));
         {rows.map(({ t, s }) => (
           <article class="card subject-card">
             <h3>{t}</h3>
-            <div class="tags"><span class="tag">A-level {s.name}</span>{s.boards.map((b) => <span class="tag">{b.short}</span>)}</div>
-            <p>Teaches A-level {s.name} for {joinList(s.boards.map((b) => b.board))}.</p>
+            <div class="tags"><span class="tag">{s.label}</span>{s.boards.map((b) => <span class="tag">{b.short}</span>)}</div>
+            <p>Teaches {s.label} for {joinList(s.boards.map((b) => b.board))}.</p>
             {s.fee && <p><strong>{s.fee}</strong></p>}
             <div class="links">
-              <a href={s.tutorUrl ?? `${s.site}/tutors/`}>Profile ↗</a>
+              {s.acuity?.[t] && <a href={acuityUrl(s.acuity[t])}>Book with {t} ↗</a>}
+              {(s.tutorUrl || s.site) && <a href={s.tutorUrl ?? `${s.site}/tutors/`}>Profile ↗</a>}
               <a href={`/${s.page}/`}>{s.name} tutoring</a>
             </div>
           </article>
