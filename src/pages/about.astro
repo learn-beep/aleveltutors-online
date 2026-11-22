@@ -2,24 +2,27 @@
 import Base from '../layouts/Base.astro';
 import LeadBlock from '../components/LeadBlock.astro';
 import subjects from '../data/subjects.json';
+import { teamStats } from '../lib';
+const { tutors, examiners, heads } = teamStats();
+const siteCount = subjects.filter((s) => s.site && !s.external).length;
 ---
-<Base title="About aleveltutors.online | Online A-level Tuition from Winchester" description="aleveltutors.online was set up by Tom Whitburn, an A-level Biology teacher with nearly 30 years of sixth form experience, to bring together specialist A-level teachers online.">
+<Base title="About aleveltutors.online | Online A-level Tutoring from Winchester" description="aleveltutors.online is run by Tom Whitburn, who has taught A-level Biology for nearly 30 years. A small team of experienced A-level specialists teaching online, one to one.">
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">About</div>
-      <h1>About aleveltutors.online</h1>
-      <p>Specialist A-level teachers, online, one subject each.</p>
+      <h1>About us</h1>
+      <p>A small team of experienced A-level specialists, run by a teacher.</p>
     </div>
   </section>
   <section class="block">
     <div class="wrap prose">
-      <p>aleveltutors.online was set up by Tom Whitburn, who has taught A-level Biology in sixth form colleges for nearly 30 years and runs <a href="https://www.alevelbiologytutor.com/">alevelbiologytutor.com</a>. aleveltutors.online brings together a small group of experienced A-level teachers, each teaching the subject they know best.</p>
-      <h2>Experience matters</h2>
-      <p>Some A-level teachers teach one A-level class a year alongside other year groups. Our tutors have spent their careers teaching A level. They know how students build up knowledge of the subject, the mistakes they usually make, and the teaching that works. They advise on exam language and command words, and keep up with changes to the specifications and to what we know about learning.</p>
-      <h2>A modern approach</h2>
-      <p>Lessons use good audio and video and online tools that let tutor and student work on the same diagrams, slides and exam questions in real time. Every lesson is recorded and can be streamed again from a private archive.</p>
-      <h2>Free revision for everyone</h2>
-      <p>Alongside the tutoring we build a free revision site for most of the subjects we teach, {subjects.filter((s) => s.site && !s.external).length} so far, with past-paper questions sorted by topic, mark schemes and examiner comments. They are free to use, with no sign-up and no adverts. <a href="/free-revision/">See them all</a>.</p>
+      <p>aleveltutors.online is run by Tom Whitburn from Winchester. Tom has taught A-level Biology in sixth form colleges for nearly 30 years and tutors through <a href="https://www.alevelbiologytutor.com/">alevelbiologytutor.com</a>. aleveltutors.online brings together experienced specialists in the other A-level subjects.</p>
+      <p>There are {tutors} tutors. Each teaches the subject they know best. Most teach, or have taught, A level in sixth form colleges; {examiners} have marked A-level exams for the exam boards and {heads} have led a department.</p>
+      <h2>What we believe</h2>
+      <p>Good tutoring is not about racing through content. It is about finding exactly where a student is losing marks, explaining it clearly, and practising until it holds. That takes someone who has taught the course many times and knows how it is examined.</p>
+      <p>We also think students should leave each lesson with something to keep. That is why every lesson is recorded, and why we have built free revision sites, {siteCount} so far, with every past-paper question sorted by topic, the mark schemes and the examiners’ comments. Anyone can use them, whether or not they have lessons with us. <a href="/free-revision/">Find yours</a>.</p>
+      <h2>Talk to Tom</h2>
+      <p>If you are unsure whether tutoring is the right step, or which subject to start with, send Tom a message. He reads every one himself.</p>
     </div>
   </section>
   <LeadBlock />

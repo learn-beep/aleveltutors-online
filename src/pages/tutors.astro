@@ -2,35 +2,34 @@
 import Base from '../layouts/Base.astro';
 import LeadBlock from '../components/LeadBlock.astro';
 import subjects from '../data/subjects.json';
-import { host, joinList, acuityUrl } from '../lib';
-const rows = subjects.flatMap((s) => s.tutors.map((t) => ({ t, s })));
+import { joinList, acuityUrl, teamStats } from '../lib';
+const rows = subjects.flatMap((s: any) => s.tutors.map((t: string) => ({ t, s, info: s.tutorInfo?.[t], id: s.acuity?.[t] })));
+const { tutors, examiners, heads } = teamStats();
 ---
-<Base title="Our Online A-level Tutors | aleveltutors.online" description="Meet our online A-level tutors: experienced A-level teachers and examiners in Maths, Further Maths, Biology, Chemistry, Physics, Psychology, Economics, Sociology, Geography and English.">
+<Base title="Our Online A-level Tutors: Teachers, Examiners and Heads of Department | aleveltutors.online" description={`Meet our ${tutors} online tutors: experienced A-level specialists, ${examiners} current or former exam board examiners and ${heads} heads of department.`}>
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Tutors</div>
-      <h1>Our A-level tutors</h1>
-      <p>Every tutor is an experienced A-level teacher. Most have taught A level for over 25 years, and many have been examiners.</p>
+      <h1>Our tutors</h1>
+      <p>Experienced specialists, not students. Most teach, or have taught, A level in sixth form colleges. {examiners} have marked A-level exams for the exam boards and {heads} have led a department.</p>
     </div>
   </section>
   <section class="block">
     <div class="wrap">
       <div class="grid grid-3">
-        {rows.map(({ t, s }) => (
+        {rows.map(({ t, s, info, id }) => (
           <article class="card subject-card">
-            <h3>{t}</h3>
+            <h3>{t}{s.slug === 'biology' ? ' Whitburn' : ''}</h3>
             <div class="tags"><span class="tag">{s.label}</span>{s.boards.map((b) => <span class="tag">{b.short}</span>)}</div>
-            <p>Teaches {s.label} for {joinList(s.boards.map((b) => b.board))}.</p>
+            <p style="color:var(--ink)">{info}</p>
             {s.fee && <p><strong>{s.fee}</strong></p>}
             <div class="links">
-              {s.acuity?.[t] && <a href={acuityUrl(s.acuity[t])}>Book with {t} ↗</a>}
-              {(s.tutorUrl || s.site) && <a href={s.tutorUrl ?? `${s.site}/tutors/`}>Profile ↗</a>}
+              {id && <a href={acuityUrl(id)}>Book with {t} ↗</a>}
               <a href={`/${s.page}/`}>{s.name} tutoring</a>
             </div>
           </article>
         ))}
       </div>
-      <p class="muted" style="margin-top:22px">Full profiles, including teaching and examining experience, are on each subject’s revision site.</p>
     </div>
   </section>
   <LeadBlock />

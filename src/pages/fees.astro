@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadBlock from '../components/LeadBlock.astro';
+import subjects from '../data/subjects.json';
+const rows = subjects.filter((s) => s.fee).flatMap((s) => s.tutors.map((t) => ({ t, s })));
+---
+<Base title="How Much Does an A-level Tutor Cost? Our Fees | aleveltutors.online" description="Our online A-level tutoring fees: £100 an hour for most subjects, paid after each lesson. No registration fee, no packages, no contract.">
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Fees</div>
+      <h1>Fees</h1>
+      <p>Most lessons are £100 an hour. You pay after each lesson, and there is nothing else to pay.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap narrow">
+      <div class="table-wrap">
+        <table class="stack">
+          <thead><tr><th>Subject</th><th>Tutor</th><th>Fee</th></tr></thead>
+          <tbody>
+            {rows.map(({ t, s }) => (
+              <tr>
+                <td data-label="Subject"><a href={`/${s.page}/`}>{s.label}</a></td>
+                <td data-label="Tutor">{t}</td>
+                <td data-label="Fee">{s.fee}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="margin-top:14px">A-level Biology one-to-one lessons and group masterclasses are priced on <a href="https://www.alevelbiologytutor.com/">alevelbiologytutor.com</a>.</p>
+
+      <div class="prose" style="margin-top:36px">
+        <h2>How payment works</h2>
+        <p>A card secures the booking and is charged after each lesson, not before. There is no registration fee, no package to buy and no contract. If you need to move a lesson, let the tutor know in advance. If you decide to stop, you simply don’t book the next one.</p>
+        <h2>What the fee includes</h2>
+        <ul>
+          <li>A one-to-one lesson with an experienced specialist in your exam board</li>
+          <li>A recording of the lesson to watch again</li>
+          <li>Resources before the lesson, and the chance to send in questions you got stuck on</li>
+          <li>Free use of our revision sites between lessons</li>
+        </ul>
+        <h2>How many lessons will we need?</h2>
+        <p>It depends on where things stand. Some students come for a few lessons to sort out one topic or prepare for a mock. Most keep a weekly lesson through Year 13. After the first lesson or two, ask your tutor what they would recommend.</p>
+        <h2>Why our tutors charge what they do</h2>
+        <p>You are paying for experience: teachers who have taught the course for many years, and in several cases marked it for the exam boards. That experience means less time spent finding the problem and more time fixing it.</p>
+      </div>
+    </div>
+  </section>
+  <LeadBlock />
+</Base>

@@ -21,11 +21,14 @@
         "path": "/ocr/"
       }
     ],
-    "blurb": "Pure, statistics and mechanics, taught step by step with exam-style questions every lesson.",
+    "blurb": "Pure, statistics and mechanics, taught step by step and practised on the exam questions that cost students the most marks.",
     "fee": "£75 for a 45-minute lesson",
     "label": "A-level Maths",
     "acuity": {
       "Tania": 29639314
+    },
+    "tutorInfo": {
+      "Tania": "Nearly 40 years teaching A-level Maths and Further Maths, and still teaches at a sixth form college."
     }
   },
   {
@@ -45,11 +48,14 @@
         "note": "Core Pure and all eight options"
       }
     ],
-    "blurb": "Core Pure and every Edexcel option, for students aiming at top grades and STEP-style problem solving.",
+    "blurb": "Core Pure and every Edexcel option, for strong mathematicians aiming for top grades and competitive university courses.",
     "fee": "£110 an hour",
     "label": "A-level Further Maths",
     "acuity": {
       "Emma": 45916420
+    },
+    "tutorInfo": {
+      "Emma": "Taught A-level Maths and Further Maths for many years at one of the UK’s top sixth form colleges."
     }
   },
   {
@@ -84,7 +90,10 @@
     "blurb": "One-to-one lessons and weekly group masterclasses with Tom Whitburn, who has taught A-level Biology for nearly 30 years.",
     "tutorUrl": "https://www.alevelbiologytutor.com/who-am-i",
     "whatsapp": "https://wa.me/447941014339",
-    "label": "A-level Biology"
+    "label": "A-level Biology",
+    "tutorInfo": {
+      "Tom": "Nearly 30 years teaching A-level Biology in sixth form colleges."
+    }
   },
   {
     "slug": "chemistry",
@@ -114,9 +123,12 @@
         "path": "/edexcel/"
       }
     ],
-    "blurb": "Calculations, mechanisms and six-mark answers, with past-paper practice sorted by topic.",
+    "blurb": "Calculations, organic mechanisms and six-mark answers, taught by a practising doctor and experienced online tutor.",
     "fee": "£100 an hour",
-    "label": "A-level Chemistry"
+    "label": "A-level Chemistry",
+    "tutorInfo": {
+      "Lariab": "A practising medical doctor with over 1,000 hours of online tutoring and more than 60 five-star reviews."
+    }
   },
   {
     "slug": "physics",
@@ -146,11 +158,14 @@
         "path": "/ocr/"
       }
     ],
-    "blurb": "Concepts, required practicals and the maths behind them, with exam questions marked the way examiners mark.",
+    "blurb": "Concepts, required practicals and the maths behind them, explained clearly and practised on real exam questions.",
     "fee": "£100 an hour",
     "label": "A-level Physics",
     "acuity": {
       "Rosey": 91663730
+    },
+    "tutorInfo": {
+      "Rosey": "Teaches A-level Physics at a highly regarded sixth form college, where she is popular with students and colleagues."
     }
   },
   {
@@ -169,11 +184,14 @@
         "path": "/"
       }
     ],
-    "blurb": "Research methods, AO3 evaluation and 16-mark essays, planned and marked against the AQA levels.",
+    "blurb": "Research methods, evaluation and 16-mark essays, planned and marked against the AQA levels by a former AQA examiner.",
     "fee": "£100 an hour",
     "label": "A-level Psychology",
     "acuity": {
       "Andy": 29790068
+    },
+    "tutorInfo": {
+      "Andy": "Nearly 30 years teaching A-level Psychology, and a former AQA examiner."
     }
   },
   {
@@ -192,11 +210,14 @@
         "path": "/"
       }
     ],
-    "blurb": "Diagrams, data response and 25-mark essays, with weekly essays marked and discussed in the next lesson.",
+    "blurb": "Diagrams, data response and 25-mark essays. Essays are set each week, marked, and discussed in the next lesson.",
     "fee": "£100 an hour",
     "label": "A-level Economics",
     "acuity": {
       "Liane": 60019385
+    },
+    "tutorInfo": {
+      "Liane": "Over 20 years teaching A-level Economics, a former Head of Department and a former Edexcel examiner."
     }
   },
   {
@@ -215,11 +236,14 @@
         "path": "/"
       }
     ],
-    "blurb": "Theories, studies and essay structure for every AQA paper, with resources for each topic.",
+    "blurb": "Theories, studies and essay technique for every AQA paper, taught by a former AQA examiner.",
     "fee": "£100 an hour",
     "label": "A-level Sociology",
     "acuity": {
       "Mark": 32727970
+    },
+    "tutorInfo": {
+      "Mark": "Over 25 years teaching A-level Sociology, head of a large department and a former AQA examiner."
     }
   },
   {
@@ -245,12 +269,16 @@
         "path": "/edexcel/"
       }
     ],
-    "blurb": "Physical and human geography, case studies, skills questions and the NEA.",
+    "blurb": "Physical and human geography, case studies, skills questions and the NEA, with an Edexcel examiner and an experienced head of department.",
     "fee": "£100 an hour",
     "label": "A-level Geography",
     "acuity": {
       "Lauren": 55161647,
       "Glenda": 95443535
+    },
+    "tutorInfo": {
+      "Lauren": "Head of Geography at a large sixth form college since 2007, an Edexcel examiner and Pearson author, and runs Oxbridge Geography workshops.",
+      "Glenda": "Former Head of Geography at a large sixth form college, with many years of A-level tutoring."
     }
   },
   {
@@ -275,11 +303,14 @@
         "path": "/literature/"
       }
     ],
-    "blurb": "Close analysis, set texts and essay writing for AQA English Language and Literature A.",
+    "blurb": "Close reading, set texts and essay writing for AQA English Language and Literature, taught by an AQA examiner.",
     "fee": "£100 an hour",
     "label": "A-level English",
     "acuity": {
       "Isobel": 73643156
+    },
+    "tutorInfo": {
+      "Isobel": "Head of English Language and Literature at an Ofsted Outstanding sixth form college, and an AQA examiner."
     }
   },
   {
@@ -302,11 +333,14 @@
         "codes": "7162 / 7161"
       }
     ],
-    "blurb": "Taught by a qualified solicitor with 25 years of A-level Law teaching in a sixth form college.",
+    "blurb": "Legal rules, cases and extended answers for OCR and AQA, taught by a qualified solicitor with 25 years of A-level teaching.",
     "acuity": {
       "Sue": 100276466
     },
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "tutorInfo": {
+      "Sue": "A qualified solicitor who has taught A-level Law in a sixth form college for 25 years."
+    }
   },
   {
     "slug": "environmental-science",
@@ -323,11 +357,14 @@
         "codes": "7447 / 7446"
       }
     ],
-    "blurb": "Taught by an AQA examiner who has taught the subject in a top sixth form college for many years.",
+    "blurb": "Ecology, resources, pollution and research methods for AQA, taught by an AQA examiner for the subject.",
     "acuity": {
       "Oliver": 67395215
     },
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "tutorInfo": {
+      "Oliver": "An AQA Environmental Science examiner who has taught the subject at a top sixth form college for many years."
+    }
   },
   {
     "slug": "gcse-biology",
@@ -349,6 +386,9 @@
     "acuity": {
       "Sam": 58661818
     },
-    "fee": "£100 an hour"
+    "fee": "£100 an hour",
+    "tutorInfo": {
+      "Sam": "Teaches A-level Biology at an Ofsted Outstanding sixth form college, and taught GCSE Science for many years."
+    }
   }
 ]

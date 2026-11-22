@@ -7,47 +7,54 @@ import WaIcon from '../components/WaIcon.astro';
 import subjects from '../data/subjects.json';
 import reviews from '../data/reviews.json';
 import { posts } from '../data/posts';
-import { waGeneral } from '../lib';
+import { waGeneral, teamStats } from '../lib';
 
 const alevel = subjects.filter((s) => s.level !== 'GCSE');
-const boardSections = alevel.reduce((n, s) => n + s.boards.length, 0);
+const { tutors, examiners, heads } = teamStats();
+
 const faqs = [
-  { q: 'Who are the tutors?', a: 'Every tutor is an experienced A-level teacher. Most have taught A level for over 25 years in sixth form colleges, and many have marked for the exam boards. Each tutor teaches one subject and knows its specification inside out.' },
-  { q: 'Are lessons online?', a: 'Yes. All lessons are one-to-one on Zoom or Google Meet. You see the same annotated slides, diagrams and exam questions as the tutor, and every lesson is recorded so you can watch it again when you revise.' },
-  { q: 'Which exam boards do you cover?', a: `We cover AQA, OCR, Pearson Edexcel, Eduqas and Cambridge International across ${alevel.length} A-level subjects, plus GCSE Biology and Science. Each subject page lists the exact specifications.` },
-  { q: 'How do I book?', a: 'Send us a WhatsApp message or the enquiry form with the subject, board and year group. We match you with the tutor, agree a regular weekly time, and the tutor contacts you before the first lesson to ask what you want to cover.' },
-  { q: 'How much are lessons?', a: 'Most one-to-one lessons are £100 an hour. Further Maths is £110 an hour, and Maths lessons are £75 for 45 minutes. A-level Biology fees are on alevelbiologytutor.com.' },
-  { q: 'How do I book a lesson?', a: 'Each subject page has a Book online button that opens the tutor’s calendar, so you can pick a time straight away. Or message us on WhatsApp and we’ll arrange it for you.' },
-  { q: 'When do I pay?', a: 'A card secures the booking and is charged after each lesson, not in advance. You can move or stop lessons if your plans change.' },
-  { q: 'Are the revision sites really free?', a: 'Yes. Every subject has a free site with past-paper questions sorted by topic, mark schemes, examiner comments, mock papers and practice tools. No sign-up and no adverts.' },
+  { q: 'Who will be teaching?', a: `A specialist in that subject, never a student. Most of our ${tutors} tutors teach, or have taught, A level in sixth form colleges. ${examiners} have marked A-level exams for the exam boards and ${heads} have led a department. Each tutor’s experience is listed on their subject page.` },
+  { q: 'How much does it cost?', a: 'Most lessons are £100 an hour. Further Maths with Emma is £110 an hour, and Maths with Tania is £75 for 45 minutes. There is nothing else to pay: no registration fee and no package to buy.' },
+  { q: 'Do we have to commit to a block of lessons?', a: 'No. You pay for each lesson after it has happened. Most students keep the same weekly time, but you can move a lesson with notice, take a break over exams or holidays, or stop when you no longer need it.' },
+  { q: 'Is it too late to start?', a: 'Students start at every point in the course, including the last few months before the exams. Later in the year, lessons concentrate on the topics and question types that carry the most marks.' },
+  { q: 'How do online lessons work?', a: 'Lessons are one to one on Zoom or Google Meet. Tutor and student work on the same slides, diagrams and exam questions, and every lesson is recorded so it can be watched again when revising.' },
+  { q: 'Which exam boards do you teach?', a: `AQA, OCR, Pearson Edexcel, Eduqas and Cambridge International, across ${alevel.length} A-level subjects, plus GCSE Biology and Science. Each subject page lists the exact specifications.` },
+  { q: 'How do we book?', a: 'Each subject page has a button that opens the tutor’s calendar, so you can choose a time straight away. If you would rather talk it through first, message Tom on WhatsApp.' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
+const worries = [
+  { h: 'The mock results were disappointing', p: 'It happens to capable students more often than people think, and it can usually be put right. A tutor finds exactly where the marks went and works through those topics, one at a time.' },
+  { h: 'They understand it, but it doesn’t show in exams', p: 'Knowing the content and writing what the mark scheme rewards are different skills. Our examiners teach how answers are marked, so effort turns into marks.' },
+  { h: 'Lessons at school have been disrupted', p: 'Staff changes, long absences and gaps in the timetable happen. A specialist can fill in what was missed and keep the course on track.' },
+  { h: 'A university offer depends on the grade', p: 'Medicine, Law and other competitive courses ask for high grades. Lessons focus on the topics and questions that will make the biggest difference.' },
+];
+const ordered = [...reviews].sort((a, b) => (b.text.includes('Medicine') ? 1 : 0) - (a.text.includes('Medicine') ? 1 : 0));
 ---
 <Base
-  title="Online A-level Tutors | Experienced A-level Teachers | aleveltutors.online"
-  description={`Online one-to-one A-level tutoring in ${alevel.map((s) => s.name).join(', ')} from experienced A-level teachers and examiners, with free revision sites for every subject.`}
+  title="Online A-level Tutors: Experienced Teachers and Examiners | aleveltutors.online"
+  description={`One-to-one online A-level tutoring in ${alevel.map((s) => s.name).join(', ')} with experienced A-level teachers and examiners. £100 an hour, paid after each lesson, no contracts.`}
   schema={[faqSchema]}
 >
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Online A-level tutors</div>
-        <h1>A-level tutoring from teachers who teach A level every day</h1>
-        <p class="lead">One-to-one online lessons with experienced A-level teachers and examiners, matched to your subject and exam board. Every lesson is recorded for revision.</p>
+        <div class="eyebrow">Online A-level tutoring</div>
+        <h1>Experienced A-level teachers, one to one</h1>
+        <p class="lead">When a university place depends on a grade, the right teacher makes a real difference. Our tutors are A-level specialists, heads of department and exam board examiners, and they know where marks are won and lost.</p>
         <div class="btn-row">
-          <a class="btn btn-wa" href={waGeneral()}><WaIcon /> WhatsApp us</a>
-          <a class="btn btn-ghost" href="/subjects/">Choose a subject</a>
+          <a class="btn btn-primary" href="/subjects/">Find a tutor</a>
+          <a class="btn btn-wa" href={waGeneral()}><WaIcon /> Ask Tom a question</a>
         </div>
       </div>
       <ul class="hero-facts">
-        <li><strong>{alevel.length}</strong><span>A-level subjects, each with its own specialist tutor</span></li>
-        <li><strong>{boardSections}</strong><span>exam board specifications covered, from AQA, OCR, Edexcel, Eduqas and Cambridge</span></li>
-        <li><strong>25+</strong><span>years of A-level teaching for most of our tutors</span></li>
-        <li><strong>Free</strong><span>revision site for every subject, with past-paper questions by topic</span></li>
+        <li><strong>{tutors}</strong><span>specialist tutors, each teaching the subject they know best</span></li>
+        <li><strong>{examiners}</strong><span>have marked A-level exams for the exam boards</span></li>
+        <li><strong>{heads}</strong><span>have led a department</span></li>
+        <li><strong>£100</strong><span>an hour for most subjects, paid after each lesson</span></li>
       </ul>
     </div>
   </section>
@@ -55,9 +62,22 @@ const faqSchema = {
   <section class="block">
     <div class="wrap">
       <div class="section-head">
+        <div class="eyebrow">How we help</div>
+        <h2>Does any of this sound familiar?</h2>
+        <p class="muted">Families usually get in touch because of something like this. Each is something an experienced teacher can help with.</p>
+      </div>
+      <div class="grid grid-2">
+        {worries.map((w) => <div class="card"><h3>{w.h}</h3><p class="muted" style="margin:0">{w.p}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap">
+      <div class="section-head">
         <div class="eyebrow">Subjects</div>
-        <h2>Choose your subject</h2>
-        <p class="muted">Each subject has a specialist tutor and a free revision site built around your exam board's past papers.</p>
+        <h2>Choose a subject</h2>
+        <p class="muted">Each subject is taught by a specialist in that exam board. You can book straight into their calendar or ask us first.</p>
       </div>
       <div class="grid grid-3">
         {subjects.map((s) => <SubjectCard s={s} />)}
@@ -65,87 +85,87 @@ const faqSchema = {
     </div>
   </section>
 
-  <section class="block alt">
+  <section class="block">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Why us</div>
-        <h2>Experience matters</h2>
-        <p class="muted">Subject knowledge is only the start. Our tutors know where students lose marks, how examiners read answers, and how to explain a hard idea in a way that sticks.</p>
+        <div class="eyebrow">Why families choose us</div>
+        <h2>Specialists, not students</h2>
+        <p class="muted">Many tutoring websites list university students. Ours are experienced subject specialists who have spent years helping sixth formers through the same course and the same exams.</p>
       </div>
       <div class="features">
         <div>
-          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>A-level specialists</h3>
-          <p>Our tutors teach A level, not a bit of everything. Most have more than 25 years of sixth form teaching, and many have been examiners.</p>
+          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>They know the exam</h3>
+          <p>Several of our tutors have marked the papers themselves. They teach students to answer the question that is asked, in the way the mark scheme rewards.</p>
         </div>
         <div>
           <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m10 9 5 2.5-5 2.5Z"/></svg>Every lesson recorded</h3>
-          <p>Lessons run on Zoom or Google Meet and are recorded, so you can stream any lesson again privately before a test or the exam.</p>
+          <p>Lessons are recorded, so explanations can be watched again before a test or in the final weeks of revision.</p>
         </div>
         <div>
-          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>Built on past papers</h3>
-          <p>Lessons use real exam questions and mark schemes. Send in the questions you found hard and the tutor will go through them with you.</p>
+          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Clear fees, no contracts</h3>
+          <p>One price per lesson, paid afterwards. No registration fee, no packages, and you can stop at any time.</p>
         </div>
         <div>
-          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Fits around school</h3>
-          <p>Most students take a regular weekly slot. Lessons carry on in the holidays and wherever you are.</p>
+          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>A real person to talk to</h3>
+          <p>aleveltutors.online is run by Tom Whitburn, an A-level Biology teacher of nearly 30 years. He reads every message himself.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block">
+  <section class="block alt">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">How it works</div>
-        <h2>Three steps to your first lesson</h2>
+        <div class="eyebrow">Getting started</div>
+        <h2>What happens next</h2>
       </div>
       <ol class="steps">
-        <li><h3>Tell us what you need</h3><p>WhatsApp or the enquiry form: subject, exam board, year group and the times that suit you.</p></li>
-        <li><h3>Meet your tutor</h3><p>We match you with the specialist for your board. They get in touch before the first lesson to ask which topics to cover.</p></li>
-        <li><h3>Learn and revise</h3><p>Weekly one-to-one lessons, recorded for revision, with the free revision site to practise between lessons.</p></li>
+        <li><h3>Choose a time, or ask first</h3><p>Book into the tutor’s calendar from their subject page, or message Tom if you’d like advice on where to start.</p></li>
+        <li><h3>The tutor gets in touch</h3><p>Before the first lesson they ask about the exam board, recent marks and the topics causing most trouble.</p></li>
+        <li><h3>Regular lessons</h3><p>Most students keep a weekly slot. Every lesson is recorded, and you only pay once each lesson has happened.</p></li>
       </ol>
       <p style="margin-top:18px"><a href="/how-it-works/">More about how lessons work →</a></p>
     </div>
   </section>
 
-  <section class="block alt">
+  <section class="block">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Reviews</div>
-        <h2>What students and parents say</h2>
+        <h2>What parents and students say</h2>
+        <p class="muted">From our Google reviews.</p>
       </div>
       <div class="grid grid-3">
-        {reviews.map((r) => <ReviewCard r={r} />)}
+        {ordered.map((r) => <ReviewCard r={r} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap grid grid-2" style="align-items:start">
+      <div>
+        <div class="eyebrow">For students</div>
+        <h2>Free past-paper practice</h2>
+        <p class="muted">We have built a free revision site for most of the subjects we teach. Every past-paper question is sorted by topic, with the mark scheme and the examiners’ comments beside it. No sign-up and no adverts.</p>
+        <a class="btn btn-primary" href="/free-revision/">Find your revision site</a>
+      </div>
+      <div>
+        <h3>How to revise well</h3>
+        <div class="post-list">
+          {posts.map((p) => (
+            <a class="card" href={`/revision-tips/${p.slug}/`}>
+              <h3 style="margin-bottom:.3em">{p.title}</h3>
+              <p>{p.description}</p>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   <section class="block">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Free revision</div>
-        <h2>Free past-paper revision for every subject</h2>
-        <p class="muted">Our revision sites sort every past-paper question by topic, with the mark scheme and examiner comments beside it, plus mock papers, specification checklists and practice tools.</p>
-      </div>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="/free-revision/">See all free revision sites</a>
-        <a class="btn btn-ghost" href="/revision-tips/">Revision tips</a>
-      </div>
-      <h3 style="margin-top:32px">From the revision tips blog</h3>
-      <div class="grid grid-3">
-        {posts.map((p) => (
-          <a class="card" href={`/revision-tips/${p.slug}/`} style="text-decoration:none;color:inherit">
-            <h3>{p.title}</h3>
-            <p class="muted" style="margin:0">{p.description}</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="block alt">
     <div class="wrap narrow">
-      <h2>Questions</h2>
+      <h2>Questions parents ask</h2>
       {faqs.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
     </div>
   </section>
