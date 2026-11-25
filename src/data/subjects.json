@@ -330,12 +330,18 @@
         "path": "/"
       },
       {
+        "board": "Cambridge International",
+        "short": "CIE",
+        "codes": "9084",
+        "path": "/cambridge/"
+      },
+      {
         "board": "AQA",
         "short": "AQA",
         "codes": "7162 / 7161"
       }
     ],
-    "blurb": "Legal rules, cases and extended answers for OCR and AQA, taught by a qualified solicitor with 25 years of A-level teaching.",
+    "blurb": "Legal rules, cases and extended answers for OCR, AQA and Cambridge International, taught by a qualified solicitor with 25 years of A-level teaching.",
     "acuity": {
       "Sue": 100276466
     },
