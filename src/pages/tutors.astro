@@ -21,7 +21,7 @@ const { tutors, examiners, heads } = teamStats();
         {rows.map(({ t, s, info, id }) => (
           <article class="card subject-card">
             <h3>{t}{s.slug === 'biology' ? ' Whitburn' : ''}</h3>
-            <div class="tags"><span class="tag">{s.label}</span>{s.boards.map((b) => <span class="tag">{b.short}</span>)}</div>
+            <div class="tags"><span class="tag">{s.label}</span>{[...new Set(s.boards.map((b) => b.short))].map((t) => <span class="tag">{t}</span>)}</div>
             <p style="color:var(--ink)">{info}</p>
             {s.fee && <p><strong>{s.fee}</strong></p>}
             <div class="links">

@@ -15,8 +15,8 @@ const { s } = Astro.props;
 const isGcse = s.level === 'GCSE';
 const book = Object.entries(s.acuity ?? {}) as [string, number][];
 const info = (s.tutorInfo ?? {}) as Record<string, string>;
-const boardNames = s.boards.map((b) => b.short);
-const wa = s.whatsapp ?? (s.boards.length === 1 ? waLink(s.boards[0].short, s.name) : waLink('', s.name));
+const boardNames = [...new Set(s.boards.map((b) => b.short))];
+const wa = s.whatsapp ?? (boardNames.length === 1 ? waLink(s.boards[0].short, s.name) : waLink('', s.name));
 const mine = reviews.filter((r) => r.subject.includes(s.name));
 const others = subjects.filter((x) => x.slug !== s.slug);
 const specHead = isGcse ? 'Specification' : 'Specification (A level / AS)';
@@ -107,7 +107,7 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
     <div class="wrap">
       <div class="section-head">
         <h2>Exam boards</h2>
-        <p class="muted">Lessons follow your exact {course} specification.{s.site && !s.external && ' Each board also has its own free revision section, with every past-paper question sorted by topic and the mark scheme beside it.'}</p>
+        <p class="muted">Lessons follow your exact {course} specification.{s.site && !s.external && (s.boards.every((b: any) => b.path) ? ' Each board also has its own free revision section, with every past-paper question sorted by topic and the mark scheme beside it.' : ' Where we have built a free revision section, it is linked below: every past-paper question sorted by topic, with the mark scheme beside it.')}</p>
       </div>
       <div class="table-wrap">
         <table class="stack">
@@ -117,7 +117,7 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
               <tr>
                 <td data-label="Exam board"><strong>{b.board}</strong>{b.note && <div class="muted">{b.note}</div>}</td>
                 <td data-label="Specification">{b.codes}</td>
-                {s.site && <td data-label="Free revision"><a href={`${s.site}${b.path}`}>{host(s.site)}{b.path === '/' ? '' : b.path.replace(/\/$/, '')} ↗</a></td>}
+                {s.site && <td data-label="Free revision">{b.path ? <a href={`${s.site}${b.path}`}>{host(s.site)}{b.path === '/' ? '' : b.path.replace(/\/$/, '')} ↗</a> : <span class="muted">Tutoring only</span>}</td>}
               </tr>
             ))}
           </tbody>

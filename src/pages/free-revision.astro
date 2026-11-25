@@ -3,18 +3,19 @@ import Base from '../layouts/Base.astro';
 import LeadBlock from '../components/LeadBlock.astro';
 import subjects from '../data/subjects.json';
 import { host } from '../lib';
-const sites = subjects.filter((s) => s.site && !s.external);
+const sites = subjects.filter((s) => s.site && !s.external).map((s) => ({ ...s, boards: s.boards.filter((b: any) => b.path) }));
+const specCount = sites.reduce((n, s) => n + s.boards.length, 0);
 const list = {
   '@context': 'https://schema.org', '@type': 'ItemList',
   itemListElement: sites.flatMap((s) => s.boards.map((b) => `${s.site}${b.path}`)).map((u, i) => ({ '@type': 'ListItem', position: i + 1, url: u })),
 };
 ---
-<Base title="Free A-level Past Paper Questions by Topic | aleveltutors.online" description="Free A-level past-paper questions sorted by topic, with mark schemes and examiner comments, for nine subjects and 16 exam board specifications." schema={[list]}>
+<Base title="Free A-level Past Paper Questions by Topic | aleveltutors.online" description={`Free A-level and GCSE Science past-paper questions sorted by topic, with mark schemes and examiner comments, for ${sites.length} subjects and ${specCount} exam board specifications.`} schema={[list]}>
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Free revision</div>
       <h1>Free A-level past-paper questions by topic</h1>
-      <p>Every question from recent past papers, sorted by specification topic, with the mark scheme and examiner comments beside it. No sign-up, no adverts.</p>
+      <p>Every question from recent past papers, sorted by specification topic, with the mark scheme and examiner comments beside it. {sites.length} subjects, including AQA GCSE Science. No sign-up, no adverts.</p>
     </div>
   </section>
   <section class="block">

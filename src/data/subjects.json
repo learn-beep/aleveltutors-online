@@ -318,6 +318,7 @@
     "name": "Law",
     "label": "A-level Law",
     "page": "online-a-level-law-tutor",
+    "site": "https://www.lawaleveltutor.com",
     "tutors": [
       "Sue"
     ],
@@ -325,7 +326,8 @@
       {
         "board": "OCR",
         "short": "OCR",
-        "codes": "H418 / H018"
+        "codes": "H418 / H018",
+        "path": "/"
       },
       {
         "board": "AQA",
@@ -347,6 +349,7 @@
     "name": "Environmental Science",
     "label": "A-level Environmental Science",
     "page": "online-a-level-environmental-science-tutor",
+    "site": "https://www.alevelenvironmentalsciencetutor.com",
     "tutors": [
       "Oliver"
     ],
@@ -354,7 +357,8 @@
       {
         "board": "AQA",
         "short": "AQA",
-        "codes": "7447 / 7446"
+        "codes": "7447 / 7446",
+        "path": "/"
       }
     ],
     "blurb": "Ecology, resources, pollution and research methods for AQA, taught by an AQA examiner for the subject.",
@@ -372,17 +376,42 @@
     "label": "GCSE Biology and Science",
     "level": "GCSE",
     "page": "online-gcse-biology-tutor",
+    "site": "https://www.sciencegcsetutor.com",
     "tutors": [
       "Sam"
     ],
     "boards": [
       {
-        "board": "Any GCSE or IGCSE board",
-        "short": "GCSE / IGCSE",
+        "board": "AQA Biology",
+        "short": "AQA",
+        "codes": "8461",
+        "path": "/biology/"
+      },
+      {
+        "board": "AQA Chemistry",
+        "short": "AQA",
+        "codes": "8462",
+        "path": "/chemistry/"
+      },
+      {
+        "board": "AQA Physics",
+        "short": "AQA",
+        "codes": "8463",
+        "path": "/physics/"
+      },
+      {
+        "board": "AQA Combined Science: Trilogy",
+        "short": "AQA",
+        "codes": "8464",
+        "path": "/"
+      },
+      {
+        "board": "Other GCSE and IGCSE boards",
+        "short": "other boards",
         "codes": "All specifications"
       }
     ],
-    "blurb": "GCSE Biology and combined Science with an A-level Biology teacher who taught GCSE Science for many years.",
+    "blurb": "GCSE Biology, Chemistry, Physics and Combined Science with an A-level Biology teacher who taught GCSE Science for many years.",
     "acuity": {
       "Sam": 58661818
     },

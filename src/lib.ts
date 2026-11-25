@@ -1,7 +1,7 @@
 import site from './data/site.json';
 
 export function waLink(board: string, subject: string) {
-  const who = board ? `an ${board} ${subject} Tutor` : `an A-level ${subject} Tutor`;
+  const who = /^GCSE/.test(subject) ? `a ${subject} Tutor` : board ? `an ${board} ${subject} Tutor` : `an A-level ${subject} Tutor`;
   const text = `Hi, I'm looking for ${who}. The student is in Year ..... Their name is ..................... we would like ........ lessons per week, the best two times for tutoring are ................. and ......................`;
   return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
 }
