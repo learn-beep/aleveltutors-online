@@ -47,6 +47,12 @@ const helps = [
 ];
 const acu = (s.acuity ?? {}) as Record<string, number>;
 const cards = s.tutors.map((t) => ({ t, id: acu[t] }));
+const detail = (s as any).detail as any | undefined;
+const faqSchema = detail?.faqs && {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: detail.faqs.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const hasPapers = s.boards.some((b: any) => b.papers);
 const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after each lesson. ` : '';
 ---
 <Base
@@ -54,7 +60,7 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
   description={s.external
     ? `Online ${s.label} tutoring for ${joinList(boardNames)} with Tom Whitburn: one-to-one lessons and weekly group masterclasses, booked on ${host(s.site!)}.`
     : `One-to-one online ${s.label} tutoring for ${joinList(boardNames)} with ${joinList(s.tutors)}. ${feeLine}Every lesson recorded.`}
-  schema={[service, crumbs]}
+  schema={[service, crumbs, ...(faqSchema ? [faqSchema] : [])]}
 >
   <section class="page-head">
     <div class="wrap">
@@ -77,7 +83,9 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
         {cards.map(({ t, id }) => (
             <article class="card subject-card">
               <h3>{t}{s.slug === 'biology' ? ' Whitburn' : ''}</h3>
-              <p style="color:var(--ink)">{info[t]}</p>
+              {detail?.profile?.[t]
+                ? detail.profile[t].map((para: string) => <p style="color:var(--ink)">{para}</p>)
+                : <p style="color:var(--ink)">{info[t]}</p>}
               {s.fee && <p><strong>{s.fee}</strong>, online and one to one, paid after each lesson.</p>}
               <div class="links">
                 {id && <a href={acuityUrl(id)}>See {t}’s free times ↗</a>}
@@ -89,11 +97,26 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
     </div>
   </section>
 
-  <section class="block alt">
+  {detail && (
+    <section class="block alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{detail.introHeading}</h2>
+          {detail.intro.map((para: string) => <p>{para}</p>)}
+        </div>
+        <h2>{detail.focusHeading}</h2>
+        <div class="grid grid-2">
+          {detail.focus.map((f: any) => <div class="card"><h3>{f.h}</h3><p class="muted" style="margin:0">{f.p}</p></div>)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class={detail ? 'block' : 'block alt'}>
     <div class="wrap grid grid-2">
       <div>
-        <h2>How lessons help</h2>
-        <ul>{helps.map((h) => <li>{h}</li>)}</ul>
+        <h2>{detail ? detail.includesHeading : 'How lessons help'}</h2>
+        <ul>{(detail ? detail.includes : helps).map((h: string) => <li>{h}</li>)}</ul>
       </div>
       <div>
         <h2>What to expect</h2>
@@ -107,20 +130,21 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
     </div>
   </section>
 
-  <section class="block">
+  <section class={detail ? 'block alt' : 'block'}>
     <div class="wrap">
       <div class="section-head">
-        <h2>Exam boards</h2>
+        <h2>{detail ? `${course} ${s.name} exam boards and papers` : 'Exam boards'}</h2>
         <p class="muted">Lessons follow your exact {course} specification.{s.site && !s.external && (s.boards.every((b: any) => b.path) ? ' Each board also has its own free revision section, with every past-paper question sorted by topic and the mark scheme beside it.' : ' Where we have built a free revision section, it is linked below: every past-paper question sorted by topic, with the mark scheme beside it.')}</p>
       </div>
       <div class="table-wrap">
         <table class="stack">
-          <thead><tr><th>Exam board</th><th>{specHead}</th>{s.site && <th>Free revision</th>}</tr></thead>
+          <thead><tr><th>Exam board</th><th>{specHead}</th>{hasPapers && <th>Papers</th>}{s.site && <th>Free revision</th>}</tr></thead>
           <tbody>
             {s.boards.map((b) => (
               <tr>
                 <td data-label="Exam board"><strong>{b.board}</strong>{b.note && <div class="muted">{b.note}</div>}</td>
                 <td data-label="Specification">{b.codes}</td>
+                {hasPapers && <td data-label="Papers">{(b as any).papers}</td>}
                 {s.site && <td data-label="Free revision">{b.path ? <a href={`${s.site}${b.path}`}>{host(s.site)}{b.path === '/' ? '' : b.path.replace(/\/$/, '')} ↗</a> : <span class="muted">Tutoring only</span>}</td>}
               </tr>
             ))}
@@ -129,6 +153,32 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
       </div>
     </div>
   </section>
+
+  {detail?.reviews && (
+    <section class="block">
+      <div class="wrap">
+        <h2>What students and parents say about {joinList(s.tutors)}</h2>
+        <div class="grid grid-2">
+          {detail.reviews.map((r: any) => (
+            <figure class="card review">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>{r.text}</blockquote>
+              <footer>{r.name} · {r.when}</footer>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {detail?.faqs && (
+    <section class="block alt">
+      <div class="wrap narrow">
+        <h2>{course} {s.name} tutoring: common questions</h2>
+        {detail.faqs.map((f: any) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+      </div>
+    </section>
+  )}
 
   {mine.length > 0 && (
     <section class="block alt">

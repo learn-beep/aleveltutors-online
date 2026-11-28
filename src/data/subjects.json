@@ -108,19 +108,22 @@
         "board": "OCR A",
         "short": "OCR",
         "codes": "H432 / H032",
-        "path": "/"
+        "path": "/",
+        "papers": "Paper 1: Periodic table, elements and physical chemistry (2h 15, 100 marks). Paper 2: Synthesis and analytical techniques (2h 15, 100 marks). Paper 3: Unified chemistry (1h 30, 70 marks)."
       },
       {
         "board": "AQA",
         "short": "AQA",
         "codes": "7405 / 7404",
-        "path": "/aqa/"
+        "path": "/aqa/",
+        "papers": "Three 2-hour papers. Paper 1: inorganic and physical chemistry (105 marks). Paper 2: organic and physical chemistry (105 marks). Paper 3: any content and practical skills (90 marks)."
       },
       {
         "board": "Pearson Edexcel",
         "short": "Edexcel",
         "codes": "9CH0 / 8CH0",
-        "path": "/edexcel/"
+        "path": "/edexcel/",
+        "papers": "Paper 1: Advanced Inorganic and Physical Chemistry (1h 45, 90 marks). Paper 2: Advanced Organic and Physical Chemistry (1h 45, 90 marks). Paper 3: General and Practical Principles in Chemistry (2h 30, 120 marks)."
       }
     ],
     "blurb": "Calculations, organic mechanisms and six-mark answers, taught by a practising doctor and experienced online tutor.",
@@ -128,6 +131,84 @@
     "label": "A-level Chemistry",
     "tutorInfo": {
       "Lariab": "A practising medical doctor with over 1,000 hours of online tutoring and more than 60 five-star reviews."
+    },
+    "detail": {
+      "introHeading": "A-level Chemistry tutoring built around the exam",
+      "intro": [
+        "A-level Chemistry is really three subjects: physical, inorganic and organic. Most students are stronger in one than the others, and the exam papers mix all three. Lessons start by finding which topics and question types are costing marks, then work through them using questions from your own exam board’s past papers."
+      ],
+      "profile": {
+        "Lariab": [
+          "Lariab is a practising medical doctor who has tutored A-level Chemistry for eight years, with more than a thousand hours of online lessons. She achieved 11 A*s at GCSE and A*AAA at A level, and has over 60 five-star reviews from students and parents.",
+          "She explains each topic until it is properly understood before moving on. She sets homework after every lesson, uses regular assessments to show what is secure and what needs more work, and gives parents progress updates whenever they ask."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level Chemistry",
+      "focus": [
+        {
+          "h": "Moles and multi-step calculations",
+          "p": "Amount of substance is the most-examined topic on all three boards: 291 question parts on OCR A, 358 on AQA and 361 on Edexcel since 2016. At least 20% of the marks in A-level Chemistry need maths. Lariab teaches students to set out every step, so the method marks are safe even when the final answer slips."
+        },
+        {
+          "h": "Organic mechanisms",
+          "p": "A curly arrow has to start and finish in exactly the right place to score. Students practise each mechanism on their specification until they can draw it the way the mark scheme expects, then move on to synthesis routes that join several reactions together."
+        },
+        {
+          "h": "Six-mark extended answers",
+          "p": "Every board sets extended questions that are marked by levels, not point by point. On OCR A there are two on every A-level paper. Students learn to answer every strand of the question in a logical order, which is the difference between a middle-level and a top-level answer."
+        },
+        {
+          "h": "Practical skills",
+          "p": "Practical work is examined in the written papers: OCR’s practical activity groups, AQA’s required practicals and Edexcel’s core practicals. Questions on method, sources of error and improving an experiment come up every series, and they can be prepared for."
+        }
+      ],
+      "includesHeading": "What lessons with Lariab include",
+      "includes": [
+        "One-to-one lessons for Year 12 (AS) and Year 13 (A level), usually one or two a week at a regular time",
+        "Your exam board’s specification covered topic by topic, from moles and bonding to organic mechanisms and transition elements",
+        "Homework after every lesson, and regular assessments",
+        "Past-paper questions marked against your board’s mark schemes",
+        "Harder questions and extension material for students aiming at A and A*",
+        "Mock-paper walk-throughs before the summer exams"
+      ],
+      "faqs": [
+        {
+          "q": "Which A-level Chemistry exam boards do you teach?",
+          "a": "OCR A (H432), AQA (7405) and Pearson Edexcel (9CH0), at AS and A level. Lariab teaches other boards too: tell us which one when you get in touch."
+        },
+        {
+          "q": "When is the best time to start Chemistry tutoring?",
+          "a": "Students start at every point in the course. Many begin after Year 12 mocks or in the autumn of Year 13. Starting earlier leaves time to secure the Year 12 foundations, such as moles, bonding and organic basics, that the Year 13 topics depend on."
+        },
+        {
+          "q": "My child needs a high Chemistry grade for Medicine. Can you help?",
+          "a": "Yes. Most UK medical schools ask for A-level Chemistry at a high grade. Lariab is a practising doctor who achieved A*AAA at A level herself, and she sets harder questions and extension material for students aiming at A and A*."
+        },
+        {
+          "q": "How much does an A-level Chemistry tutor cost?",
+          "a": "Lessons with Lariab are £100 an hour, online and one to one. The first lesson is charged at the same rate, with no obligation to continue. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book a Chemistry lesson?",
+          "a": "Message Tom on WhatsApp or send the enquiry form with the exam board, year group and the times that suit you. He will put you in touch with Lariab to arrange the first lesson."
+        },
+        {
+          "q": "Is there free A-level Chemistry revision material?",
+          "a": "Yes. Our free site, chemistryaleveltutor.com, has every past-paper question since 2016 sorted by topic: 1,820 question parts for OCR A, 2,306 for AQA and 2,042 for Edexcel, each with its mark scheme and the examiner’s comment. There is no sign-up."
+        }
+      ],
+      "reviews": [
+        {
+          "name": "Maryam L",
+          "when": "February 2025",
+          "text": "My daughter has been very happy with her chemistry tutor sessions. Each session she walks away feeling more confident in her understanding of the material. Materials are also presented in a way that helps make it easier to remember and learn. Thank you!"
+        },
+        {
+          "name": "Nayana J",
+          "when": "October 2022",
+          "text": "Fantastic tutor! Very thorough with her teaching and is patient to make sure you understand."
+        }
+      ]
     }
   },
   {
