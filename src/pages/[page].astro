@@ -16,7 +16,7 @@ const isGcse = s.level === 'GCSE';
 const book = Object.entries(s.acuity ?? {}) as [string, number][];
 const info = (s.tutorInfo ?? {}) as Record<string, string>;
 const boardNames = [...new Set(s.boards.map((b) => b.short))];
-const wa = s.whatsapp ?? (boardNames.length === 1 ? waLink(s.boards[0].short, s.name) : waLink('', s.name));
+const wa = waLink(boardNames.length === 1 ? s.boards[0].short : '', s.name, s.whatsapp);
 const mine = reviews.filter((r) => r.subject.includes(s.name));
 const others = subjects.filter((x) => x.slug !== s.slug);
 const specHead = isGcse ? 'Specification' : 'Specification (A level / AS)';

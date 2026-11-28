@@ -1,13 +1,13 @@
 import site from './data/site.json';
 
-export function waLink(board: string, subject: string) {
-  const who = /^GCSE/.test(subject) ? `a ${subject} Tutor` : board ? `an ${board} ${subject} Tutor` : `an A-level ${subject} Tutor`;
-  const text = `Hi, I'm looking for ${who}. The student is in Year ..... Their name is ..................... we would like ........ lessons per week, the best two times for tutoring are ................. and ......................`;
-  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
+export function waLink(board: string, subject: string, base?: string) {
+  const who = /^GCSE/.test(subject) ? `a ${subject} tutor` : board ? `an ${board} ${subject} tutor` : `an A-level ${subject} tutor`;
+  const text = `Hi Tom, I'm looking for ${who}.`;
+  return `${base ?? `https://wa.me/${site.whatsapp}`}?text=${encodeURIComponent(text)}`;
 }
 
 export function waGeneral() {
-  const text = `Hi, I'm looking for an A-level Tutor. The subject is ........ The student is in Year ..... Their name is ..................... we would like ........ lessons per week, the best two times for tutoring are ................. and ......................`;
+  const text = `Hi Tom, I'm looking for an A-level tutor.`;
   return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 
