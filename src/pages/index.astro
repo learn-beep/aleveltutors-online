@@ -135,7 +135,7 @@ const ordered = [...reviews].sort((a, b) => (b.text.includes('Medicine') ? 1 : 0
       <div class="section-head">
         <div class="eyebrow">Reviews</div>
         <h2>What parents and students say</h2>
-        <p class="muted">From our <a href={site.googleReviews} rel="noopener">Google reviews</a>.</p>
+        <p class="muted">Rated {site.googleRating.value} out of 5 from {site.googleRating.count} <a href={site.googleReviews} rel="noopener">Google reviews</a>.</p>
       </div>
       <div class="grid grid-3">
         {ordered.map((r) => <ReviewCard r={r} />)}

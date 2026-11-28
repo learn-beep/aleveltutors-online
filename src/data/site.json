@@ -14,5 +14,12 @@
     "locality": "Winchester",
     "postcode": "SO23 0JP"
   },
-  "profiles": []
+  "profiles": [
+    "https://www.google.com/maps?cid=687994080750433508"
+  ],
+  "googleRating": {
+    "value": "5.0",
+    "count": 10,
+    "checked": "2026-11-28"
+  }
 }
