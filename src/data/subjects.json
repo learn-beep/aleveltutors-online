@@ -291,19 +291,22 @@
         "board": "AQA",
         "short": "AQA",
         "codes": "7408 / 7407",
-        "path": "/"
+        "path": "/",
+        "papers": "Three 2-hour papers. Paper 1: sections 1 to 5 and periodic motion. Paper 2: thermal physics, fields and nuclear physics. Paper 3: practical skills and data analysis, plus your option topic."
       },
       {
         "board": "Eduqas",
         "short": "Eduqas",
         "codes": "A420QS / B420QS",
-        "path": "/eduqas/"
+        "path": "/eduqas/",
+        "papers": "Component 1: Newtonian physics (2h 15). Component 2: Electricity and the universe (2h). Component 3: Light, nuclei and options (2h 15)."
       },
       {
         "board": "OCR A",
         "short": "OCR",
         "codes": "H556 / H156",
-        "path": "/ocr/"
+        "path": "/ocr/",
+        "papers": "Paper 1: Modelling physics (2h 15). Paper 2: Exploring physics (2h 15). Paper 3: Unified physics (1h 30)."
       }
     ],
     "blurb": "Concepts, required practicals and the maths behind them, explained clearly and practised on real exam questions.",
@@ -314,6 +317,71 @@
     },
     "tutorInfo": {
       "Rosey": "Teaches A-level Physics at a highly regarded sixth form college, where she is popular with students and colleagues."
+    },
+    "detail": {
+      "introHeading": "A-level Physics tutoring from a current sixth form teacher",
+      "intro": [
+        "Physics is taught as a set of ideas but examined largely through calculation: at least 40% of the marks in A-level Physics are for mathematical skills. Students who follow the lesson can still lose marks in the exam. Rosey explains whatever has not clicked in class, then practises it on past-paper questions from your own board."
+      ],
+      "profile": {
+        "Rosey": [
+          "Rosey teaches A-level Physics at a top sixth form college. She is extremely popular with her students and highly regarded by her fellow teachers.",
+          "Her lessons are built around what earns marks on the AQA, OCR and Eduqas papers, and she marks past-paper questions against the board’s mark scheme with feedback on where the marks went."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level Physics",
+      "focus": [
+        {
+          "h": "Multi-step calculations",
+          "p": "Mark schemes give marks for each step and allow an error to be carried forward, but a wrong answer with no working earns nothing. Rosey teaches students to set out every step, with units, so the method marks are safe."
+        },
+        {
+          "h": "Practical skills and uncertainties",
+          "p": "Practical work is examined in the written papers. Measurements and uncertainties is the most-examined topic in our AQA question bank, and practical skills is the most-examined on OCR A. These questions follow patterns that can be learned."
+        },
+        {
+          "h": "Definitions and explanations",
+          "p": "Some marks depend on a definition given exactly as the examiners expect it, and “explain” questions need each step of the reasoning written down. Lessons practise the wording as well as the physics."
+        },
+        {
+          "h": "Six-mark extended answers",
+          "p": "Each board sets longer written questions that are marked by levels. Students learn to plan a short, ordered answer that covers every part of the question, which is what reaches the top level."
+        }
+      ],
+      "includesHeading": "What lessons with Rosey include",
+      "includes": [
+        "One-to-one lessons for Year 12 (AS) and Year 13 (A level) at a regular weekly time",
+        "Topic-by-topic teaching of anything that has not clicked in class, from particles and waves to fields and the option topics",
+        "Past-paper questions marked against the AQA, OCR or Eduqas mark schemes, with feedback on where the marks went",
+        "Practical and data-analysis questions",
+        "Mock-paper walk-throughs before the summer exams"
+      ],
+      "faqs": [
+        {
+          "q": "Which A-level Physics exam boards do you teach?",
+          "a": "AQA (7408 and AS 7407), OCR Physics A (H556 and AS H156) and Eduqas (A420QS and AS B420QS). If your child is on another board, tell us when you get in touch."
+        },
+        {
+          "q": "My child is not taking A-level Maths. Can a tutor still help?",
+          "a": "Yes. The maths in A-level Physics is a fixed list of skills, such as rearranging equations, powers of ten, graphs, trigonometry and logarithms. They can be taught alongside the physics and practised on real exam questions."
+        },
+        {
+          "q": "When is the best time to start Physics tutoring?",
+          "a": "Students start at every point in the course. Many begin after a disappointing test or mock. Year 13 topics such as fields build on Year 12 mechanics and electricity, so it helps to close gaps early."
+        },
+        {
+          "q": "How much does an A-level Physics tutor cost?",
+          "a": "Lessons are £100 an hour, online and one to one, paid after each lesson. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book a Physics lesson?",
+          "a": "Choose a time in Rosey’s calendar from this page. If you would rather ask a question first, message Tom on WhatsApp or send the enquiry form."
+        },
+        {
+          "q": "Is there free A-level Physics revision material?",
+          "a": "Yes. Our free site, physicsaleveltutor.com, has every past-paper question since 2016 sorted by topic: 2,729 question parts for AQA, 1,885 for OCR A and 1,778 for Eduqas, each with its mark scheme and the examiner’s comment. There is no sign-up."
+        }
+      ]
     }
   },
   {
@@ -421,7 +489,8 @@
         "board": "Pearson Edexcel Economics A",
         "short": "Edexcel",
         "codes": "9EC0 / 8EC0",
-        "path": "/"
+        "path": "/",
+        "papers": "Three 2-hour papers. Paper 1: Markets and Business Behaviour. Paper 2: The National and Global Economy. Paper 3: Microeconomics and Macroeconomics."
       }
     ],
     "blurb": "Diagrams, data response and 25-mark essays. Essays are set each week, marked, and discussed in the next lesson.",
@@ -432,6 +501,71 @@
     },
     "tutorInfo": {
       "Liane": "Over 20 years teaching A-level Economics, a former Head of Department and a former Edexcel examiner."
+    },
+    "detail": {
+      "introHeading": "A-level Economics tutoring from a former Edexcel examiner",
+      "intro": [
+        "In A-level Economics, understanding the theory is only the start. The higher grades come from applying it to the data in front of you, building a chain of reasoning, and evaluating it. Liane has examined for Edexcel, and she sets essays every week, marks them, and goes through them in the next lesson."
+      ],
+      "profile": {
+        "Liane": [
+          "Liane taught A-level Economics for over twenty years, as Head of Department in a school rated outstanding by Ofsted and in an outstanding sixth form college. She has been an examiner for Edexcel A-level Economics and A-level Business.",
+          "Each lesson covers a topic in full, then moves to real past-paper questions, which she marks against the Edexcel levels grids and goes over with the student."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level Economics",
+      "focus": [
+        {
+          "h": "25-mark essays",
+          "p": "Section C of each A-level paper offers a choice of two 25-mark essays, about 30 minutes of writing. The top level needs chains of reasoning, relevant diagrams and evaluation that reaches a judgement."
+        },
+        {
+          "h": "Diagrams",
+          "p": "A diagram earns marks when it is accurate, fully labelled and then used in the argument. Students often draw the right diagram and never refer to it. Liane teaches how to make each one do some work in the answer."
+        },
+        {
+          "h": "Using the extracts",
+          "p": "The data-response questions in Section B give marks for application: using the figures and the context in the extracts. An answer that would fit any economy or any firm misses those marks, however good the theory."
+        },
+        {
+          "h": "Short answers and calculations",
+          "p": "Section A is where easy marks leak away through a missing definition, a calculation without working, or a diagram with no labels. A reliable technique for these questions protects marks before the essays begin."
+        }
+      ],
+      "includesHeading": "What lessons with Liane include",
+      "includes": [
+        "One-to-one lessons for Year 12 and Year 13 at a regular weekly time",
+        "Essays set each week, marked, and discussed in the next lesson",
+        "Data-response answers marked with examiner-style written feedback",
+        "Each topic covered in full, followed by real past-paper questions",
+        "Mock-paper walk-throughs before the summer exams"
+      ],
+      "faqs": [
+        {
+          "q": "Which A-level Economics exam boards do you teach?",
+          "a": "Liane specialises in Pearson Edexcel Economics A (9EC0 and AS 8EC0), where she has been an examiner. If your child is on AQA or another board, tell us when you get in touch."
+        },
+        {
+          "q": "Will Liane set and mark essays?",
+          "a": "Yes. She sets essay questions every week, marks them against the Edexcel levels, and goes through them in the next lesson. Students tell us this is what makes the biggest difference to their exam technique."
+        },
+        {
+          "q": "When is the best time to start Economics tutoring?",
+          "a": "Students start at every point in the course. Because essay technique improves with practice and feedback, starting earlier gives more essays time to be written, marked and improved before the exams."
+        },
+        {
+          "q": "How much does an A-level Economics tutor cost?",
+          "a": "Lessons are £100 an hour, online and one to one, paid after each lesson. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book an Economics lesson?",
+          "a": "Choose a time in Liane’s calendar from this page. If you would rather ask a question first, message Tom on WhatsApp or send the enquiry form."
+        },
+        {
+          "q": "Is there free A-level Economics revision material?",
+          "a": "Yes. Our free site, economicsaleveltutor.com, has 783 question parts from 45 Edexcel Economics A papers since 2016, sorted by topic, each with its data, mark scheme and the examiner’s comment. It also lists every essay title set and has an AQA section. There is no sign-up."
+        }
+      ]
     }
   },
   {
@@ -548,13 +682,15 @@
         "board": "AQA",
         "short": "AQA",
         "codes": "7037 / 7036",
-        "path": "/aqa/"
+        "path": "/aqa/",
+        "papers": "Paper 1: Physical geography (2h 30). Paper 2: Human geography (2h 30). Plus the NEA, an independent fieldwork investigation worth 20% of the A level."
       },
       {
         "board": "Pearson Edexcel",
         "short": "Edexcel",
         "codes": "9GE0 / 8GE0",
-        "path": "/edexcel/"
+        "path": "/edexcel/",
+        "papers": "Paper 1: Physical geography (2h 15). Paper 2: Human geography (2h 15). Paper 3: Synoptic investigation (2h 15). Plus the NEA, an independent investigation worth 20% of the A level."
       }
     ],
     "blurb": "Physical and human geography, case studies, skills questions and the NEA, with an Edexcel examiner and an experienced head of department.",
@@ -567,6 +703,75 @@
     "tutorInfo": {
       "Lauren": "Head of Geography at a large sixth form college since 2007, an Edexcel examiner and Pearson author, and runs Oxbridge Geography workshops.",
       "Glenda": "Former Head of Geography at a large sixth form college, with many years of A-level tutoring."
+    },
+    "detail": {
+      "introHeading": "A-level Geography tutoring from two heads of department",
+      "intro": [
+        "A-level Geography asks for more than knowing the content and the case studies. The marks go to students who use the data in the figures, develop each point into an explanation, and build an argument to a conclusion in the longer answers. Lauren and Glenda have both led Geography departments, and Lauren has examined for Edexcel."
+      ],
+      "profile": {
+        "Lauren": [
+          "Lauren teaches A-level Geography at a top sixth form college, where she has been Head of Geography since 2007, and has a reputation for outstanding lessons. She is an author for Pearson, wrote chapters in two of the current A-level Geography textbooks, and has been an examiner for Edexcel.",
+          "She runs Oxbridge Geography workshops and has helped many students win places to read Geography at Oxford and Cambridge, including preparation for the admissions tests and interviews."
+        ],
+        "Glenda": [
+          "Glenda was Head of Geography at a large sixth form college and has tutored A-level Geography for many years.",
+          "She is comfortable teaching every A-level Geography specification, AQA, Edexcel and the others, so she can work with whatever your school teaches. She also helps with exam technique for the 9-, 12-, 16- and 20-mark questions and with the NEA."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level Geography",
+      "focus": [
+        {
+          "h": "Using the figures",
+          "p": "Many questions come with a map, graph, table or photograph: on Edexcel they sit in a separate Resource Booklet. Marks are given for using that data precisely, quoting figures and spotting patterns and exceptions, not for describing it in general terms."
+        },
+        {
+          "h": "20-mark essays",
+          "p": "The longest questions on both boards are worth 20 marks and are marked by levels. On AQA alone, 153 have been set since 2017. The top level needs a sustained argument and a conclusion that answers the question, not a list of everything the student knows."
+        },
+        {
+          "h": "The synoptic paper",
+          "p": "Edexcel’s Paper 3 is a synoptic investigation: an unseen issue, with a booklet of resources, that draws on the whole course. It rewards students who can link physical and human geography under time pressure, and it can be practised."
+        },
+        {
+          "h": "The NEA",
+          "p": "The independent investigation is worth 20% of the A level on both boards. The boards limit how much help a teacher or tutor may give, and our tutors work within those rules: helping students plan, choose methods and understand what the mark scheme is looking for."
+        }
+      ],
+      "includesHeading": "What lessons with Lauren and Glenda include",
+      "includes": [
+        "One-to-one lessons for AS and A-level Geography, AQA and Edexcel",
+        "Essays and extended answers marked against the board’s levels",
+        "Exam technique for the 9-, 12-, 16- and 20-mark questions",
+        "Help with the NEA within the board’s rules",
+        "Oxford and Cambridge Geography preparation with Lauren, including admissions tests and interviews"
+      ],
+      "faqs": [
+        {
+          "q": "Which A-level Geography exam boards do you teach?",
+          "a": "AQA (7037 and AS 7036) and Pearson Edexcel (9GE0 and AS 8GE0). Glenda also teaches the other A-level Geography specifications: tell us which when you get in touch."
+        },
+        {
+          "q": "There are two tutors. Which one should we choose?",
+          "a": "Both are experienced heads of department and either can teach AQA or Edexcel. Lauren is an Edexcel examiner and prepares students for Oxford and Cambridge. If you are unsure, message Tom with the exam board and what you need, and he will suggest who fits best."
+        },
+        {
+          "q": "Can a tutor help with the Geography NEA?",
+          "a": "Yes, within the exam board’s rules, which limit the help a teacher or tutor may give. A tutor can help a student plan the investigation, choose suitable methods and understand the mark scheme. The work itself must be the student’s own."
+        },
+        {
+          "q": "How much does an A-level Geography tutor cost?",
+          "a": "Lessons are £100 an hour, online and one to one, paid after each lesson. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book a Geography lesson?",
+          "a": "Choose a time in Lauren’s or Glenda’s calendar from this page. If you would rather ask a question first, message Tom on WhatsApp or send the enquiry form."
+        },
+        {
+          "q": "Is there free A-level Geography revision material?",
+          "a": "Yes. Our free site, alevelgeographytutor.com, has 910 question parts from 36 AQA papers and 868 from 40 Edexcel papers since 2017, sorted by topic, each with its figures, mark scheme and the examiner’s comment. There is no sign-up."
+        }
+      ]
     }
   },
   {
@@ -583,13 +788,15 @@
         "board": "AQA English Language",
         "short": "AQA Language",
         "codes": "7702 / 7701",
-        "path": "/language/"
+        "path": "/language/",
+        "papers": "Paper 1: Language, the individual and society (2h 30). Paper 2: Language diversity and change (2h 30). Plus the NEA, Language in Action."
       },
       {
         "board": "AQA English Literature A",
         "short": "AQA Literature A",
         "codes": "7712 / 7711",
-        "path": "/literature/"
+        "path": "/literature/",
+        "papers": "Paper 1: Love through the ages (3 hours). Paper 2: Texts in shared contexts, either WW1 and its aftermath or Modern times (2h 30). Plus the NEA, an independent critical study."
       }
     ],
     "blurb": "Close reading, set texts and essay writing for AQA English Language and Literature, taught by an AQA examiner.",
@@ -600,6 +807,75 @@
     },
     "tutorInfo": {
       "Isobel": "Head of English Language and Literature at an Ofsted Outstanding sixth form college, and an AQA examiner."
+    },
+    "detail": {
+      "introHeading": "A-level English tutoring from an AQA examiner",
+      "intro": [
+        "A-level English Language and English Literature are both marked on the quality of the argument, not the amount written. Examiners reward close analysis in precise terms, context that explains meaning, and an argument that holds together from the first line to the conclusion. Isobel is an AQA examiner and teaches both subjects."
+      ],
+      "profile": {
+        "Isobel": [
+          "Isobel teaches A-level English Language and English Literature at a top sixth form college, rated Outstanding by Ofsted, where she is Head of English Language and Literature.",
+          "She is an examiner for AQA, so she knows exactly how answers are marked against the levels and bands. She also tutors GCSE English Language and English Literature."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level English",
+      "focus": [
+        {
+          "h": "Close analysis in precise terms",
+          "p": "Top-band answers look closely at particular words, structures and patterns and name them accurately. General comments about a writer’s “effect on the reader” stay in the middle bands. Lessons practise analysis on the kinds of text the papers set."
+        },
+        {
+          "h": "Context that explains meaning",
+          "p": "Context earns marks when it helps explain what a text means or why it was written that way. A paragraph of background added on to the end of an essay does not. Isobel shows students how to weave it into the argument."
+        },
+        {
+          "h": "Weighing other readings",
+          "p": "In Literature, students are expected to consider other interpretations. The marks come from weighing them against their own reading, not from listing what critics have said."
+        },
+        {
+          "h": "Planning under time pressure",
+          "p": "The Literature Paper 1 exam is three hours long, and the Language papers are two and a half. A few minutes spent planning each answer is what keeps an argument on course. Lessons include essay planning and timed writing."
+        }
+      ],
+      "includesHeading": "What lessons with Isobel cover",
+      "includes": [
+        "English Language: text analysis, child language acquisition, language diversity and change, discourses, the opinion article and the NEA (Language in Action)",
+        "English Literature: your Shakespeare play and set texts, the love poetry anthology, unseen poetry and prose, the WW1 or Modern times paper and the NEA",
+        "Essay planning and timed writing",
+        "Essays and analysis marked against AQA’s levels and bands",
+        "Other boards too: Edexcel, OCR and Eduqas"
+      ],
+      "faqs": [
+        {
+          "q": "Do you tutor both English Language and English Literature?",
+          "a": "Yes. Isobel teaches A-level English Language and A-level English Literature, and is Head of both at her college. Tell us which your child is taking, or both."
+        },
+        {
+          "q": "Which A-level English exam boards do you teach?",
+          "a": "Isobel is an AQA examiner and specialises in AQA English Language (7702) and AQA English Literature A (7712). She also teaches Edexcel, OCR and Eduqas English Language and English Literature."
+        },
+        {
+          "q": "Can a tutor help with the English NEA?",
+          "a": "Yes, within the exam board’s rules, which limit the help a teacher or tutor may give. A tutor can help a student choose a focus, plan the work and understand the mark scheme. The work itself must be the student’s own."
+        },
+        {
+          "q": "Do you tutor GCSE English?",
+          "a": "Yes. Isobel also tutors GCSE English Language and English Literature. Message Tom with the year group and exam board."
+        },
+        {
+          "q": "How much does an A-level English tutor cost?",
+          "a": "Lessons are £100 an hour, online and one to one, paid after each lesson. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book an English lesson?",
+          "a": "Choose a time in Isobel’s calendar from this page. If you would rather ask a question first, message Tom on WhatsApp or send the enquiry form."
+        },
+        {
+          "q": "Is there free A-level English revision material?",
+          "a": "Yes. Our free site, alevelenglishtutor.com, has 135 AQA English Language questions from 36 papers and 468 AQA English Literature A questions from 45 papers since 2016, sorted by topic, each with its texts, mark scheme and the examiner’s comment. There is no sign-up."
+        }
+      ]
     }
   },
   {
