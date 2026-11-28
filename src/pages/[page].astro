@@ -68,7 +68,8 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
       <h1>Online {s.label} tutor</h1>
       <p>{s.blurb}</p>
       <div class="btn-row" style="margin-top:20px">
-        {s.external && <a class="btn btn-primary" href={`${s.site}/`}>Book on {host(s.site!)}</a>}
+        {s.external && <a class="btn btn-primary" href={detail?.bookUrl ?? `${s.site}/`}>Book on {host(s.site!)}</a>}
+        {s.external && detail?.links?.map((l: any) => <a class="btn btn-ghost" style="color:#fff" href={l.href}>{l.label} ↗</a>)}
         {book.map(([t, id]) => <a class="btn btn-primary" href={acuityUrl(id)}>Book with {t}</a>)}
         {!s.external && <a class="btn btn-wa" href={wa}><WaIcon /> Ask a question first</a>}
         {s.site && !s.external && <a class="btn btn-ghost" style="color:#fff" href={`${s.site}/`}>Free {s.name} revision ↗</a>}
@@ -133,7 +134,7 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
   <section class={detail ? 'block alt' : 'block'}>
     <div class="wrap">
       <div class="section-head">
-        <h2>{detail ? `${course} ${s.name} exam boards and papers` : 'Exam boards'}</h2>
+        <h2>{detail ? `${s.label} exam boards and papers` : 'Exam boards'}</h2>
         <p class="muted">Lessons follow your exact {course} specification.{s.site && !s.external && (s.boards.every((b: any) => b.path) ? ' Each board also has its own free revision section, with every past-paper question sorted by topic and the mark scheme beside it.' : ' Where we have built a free revision section, it is linked below: every past-paper question sorted by topic, with the mark scheme beside it.')}</p>
       </div>
       <div class="table-wrap">
@@ -174,7 +175,7 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
   {detail?.faqs && (
     <section class="block alt">
       <div class="wrap narrow">
-        <h2>{course} {s.name} tutoring: common questions</h2>
+        <h2>{s.label} tutoring: common questions</h2>
         {detail.faqs.map((f: any) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
       </div>
     </section>
