@@ -449,9 +449,16 @@
         "codes": "7192 / 7191",
         "path": "/",
         "papers": "Three 2-hour papers, 80 marks each. Paper 1: Education with Theory and Methods. Paper 2: Topics in Sociology (two options, 40 marks each). Paper 3: Crime and Deviance with Theory and Methods."
+      },
+      {
+        "board": "Cambridge International",
+        "short": "CIE",
+        "codes": "9699",
+        "path": "/cambridge/",
+        "papers": "Four papers. AS Level: Paper 1 Socialisation, Identity and Methods of Research, and Paper 2 The Family. A Level: Paper 3 Education, and Paper 4 Globalisation, Media and Religion."
       }
     ],
-    "blurb": "Theories, studies and essay technique for every AQA paper, taught by a former AQA examiner.",
+    "blurb": "Theories, studies and essay technique for AQA and Cambridge International, taught by a former AQA examiner.",
     "fee": "£100 an hour",
     "label": "A-level Sociology",
     "acuity": {
@@ -496,12 +503,13 @@
         "Essays marked against the AQA levels, with written feedback",
         "Practice on Theory and Methods and Methods in Context",
         "Education, Crime and Deviance and your school’s two Paper 2 options",
+        "Cambridge International 9699: Papers 1 to 4, including the 26- and 35-mark essays",
         "Mock-paper walk-throughs before the summer exams"
       ],
       "faqs": [
         {
           "q": "Which A-level Sociology exam boards do you teach?",
-          "a": "Mark specialises in AQA A-level Sociology (7192) and AS (7191), where he has been an examiner. He also teaches Cambridge International AS and A Level Sociology (9699) and other specifications: tell us which when you get in touch."
+          "a": "Mark teaches AQA A-level Sociology (7192) and AS (7191), where he has been an examiner, and Cambridge International AS and A Level Sociology (9699). He can teach other specifications too: tell us which when you get in touch."
         },
         {
           "q": "Will Mark mark my essays?",
@@ -521,7 +529,7 @@
         },
         {
           "q": "Is there free A-level Sociology revision material?",
-          "a": "Yes. Our free site, alevelsociologytutor.com, has 612 question parts from 48 AQA Sociology papers since 2016, sorted by topic, each with its Item, mark scheme and the examiner’s comment. It also lists every essay title set. There is no sign-up."
+          "a": "Yes. Our free site, alevelsociologytutor.com, has 612 question parts from 48 AQA Sociology papers since 2016, sorted by topic, each with its Item, mark scheme and the examiner’s comment, and it lists every essay title set. Its Cambridge section has 727 question parts from 9699 papers since 2021. There is no sign-up."
         }
       ]
     }
