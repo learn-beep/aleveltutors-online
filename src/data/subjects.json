@@ -12,13 +12,15 @@
         "board": "Pearson Edexcel",
         "short": "Edexcel",
         "codes": "9MA0 / 8MA0",
-        "path": "/"
+        "path": "/",
+        "papers": "Three 2-hour papers, 100 marks each. Paper 1: Pure Mathematics 1. Paper 2: Pure Mathematics 2. Paper 3: Statistics and Mechanics."
       },
       {
         "board": "OCR A",
         "short": "OCR",
         "codes": "H240 / H230",
-        "path": "/ocr/"
+        "path": "/ocr/",
+        "papers": "Three 2-hour papers, 100 marks each. Paper 1: Pure Mathematics. Paper 2: Pure Mathematics and Statistics. Paper 3: Pure Mathematics and Mechanics."
       }
     ],
     "blurb": "Pure, statistics and mechanics, taught step by step and practised on the exam questions that cost students the most marks.",
@@ -29,6 +31,71 @@
     },
     "tutorInfo": {
       "Tania": "Nearly 40 years teaching A-level Maths and Further Maths, and still teaches at a sixth form college."
+    },
+    "detail": {
+      "introHeading": "A-level Maths tutoring from a teacher of nearly 40 years",
+      "intro": [
+        "A-level Maths builds on itself. A gap in algebra from Year 12 shows up again in calculus, in mechanics and in statistics, and it costs marks on every paper. Tania finds where the understanding stops, explains the principle underneath, and then practises it on exam questions from your own board until it is secure."
+      ],
+      "profile": {
+        "Tania": [
+          "Tania has taught A-level Maths and Further Maths for nearly 40 years, and still teaches at a top sixth form college, where she is very popular with her students.",
+          "She has a deep understanding of how students take in mathematics and of the best ways to help them learn. Parents and students most often mention how clearly she explains the reasoning behind each step."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level Maths",
+      "focus": [
+        {
+          "h": "Algebra under everything",
+          "p": "Algebra and functions is the most heavily examined area of the Edexcel specification, with more marks since 2018 than trigonometry, differentiation or integration. Slips in algebra are also how marks are lost in every other topic, so it is usually the first thing to secure."
+        },
+        {
+          "h": "Proof and “show that” questions",
+          "p": "These ask for the reasoning to be written out, not just a correct answer. Examiners report that students often cannot set up a proof by contradiction in the right language, leaving out words such as “assume”. It is a skill that improves quickly with practice."
+        },
+        {
+          "h": "Statistics and the large data set",
+          "p": "Statistics questions expect a conclusion written in the context of the question, and both boards expect students to know their large data set. Hypothesis tests follow the same steps every time, and marks are lost when one of those steps is missing."
+        },
+        {
+          "h": "Mechanics",
+          "p": "Kinematics and forces carry a large share of the applied marks. Most errors come before any calculation: a missing force on the diagram, or a sign going the wrong way. Tania teaches students to set a problem up carefully so the working follows."
+        }
+      ],
+      "includesHeading": "What lessons with Tania include",
+      "includes": [
+        "One-to-one 45-minute lessons for Year 12 (AS) and Year 13 (A level)",
+        "Pure, statistics and mechanics for Edexcel or OCR A",
+        "Each lesson planned around the student: a topic that is not secure, or a paper they found hard",
+        "Exam questions chosen to match the topic, with every step of the reasoning explained",
+        "Extra resources for weaker topics between lessons"
+      ],
+      "faqs": [
+        {
+          "q": "Which A-level Maths exam boards do you teach?",
+          "a": "Tania teaches Pearson Edexcel (9MA0 and AS 8MA0) and OCR A (H240 and AS H230). If your child is on another board, tell us when you get in touch."
+        },
+        {
+          "q": "Do you also tutor A-level Further Maths?",
+          "a": "Yes. A-level Further Maths is taught by Emma, who has her own page on this site. Tania teaches A-level Maths."
+        },
+        {
+          "q": "When is the best time to start Maths tutoring?",
+          "a": "Students start at every point in the course. Because each topic builds on the last, it helps to deal with a gap soon after it appears, often after a Year 12 test or mock, before the Year 13 content is built on top of it."
+        },
+        {
+          "q": "How much does an A-level Maths tutor cost?",
+          "a": "Lessons with Tania are £75 for 45 minutes, online and one to one, paid after each lesson. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book a Maths lesson?",
+          "a": "Choose a time in Tania’s calendar from this page. If you would rather ask a question first, message Tom on WhatsApp or send the enquiry form."
+        },
+        {
+          "q": "Is there free A-level Maths revision material?",
+          "a": "Yes. Our free site, mathsaleveltutor.com, has 1,348 question parts from all 54 Edexcel papers since 2018 and 1,295 from all 40 OCR A papers, sorted by topic, each with its mark scheme and the examiner’s comment. There is no sign-up."
+        }
+      ]
     }
   },
   {
@@ -262,7 +329,8 @@
         "board": "AQA",
         "short": "AQA",
         "codes": "7182 / 7181",
-        "path": "/"
+        "path": "/",
+        "papers": "Three 2-hour papers, 96 marks each. Paper 1: Introductory Topics in Psychology. Paper 2: Psychology in Context. Paper 3: Issues and Options in Psychology."
       }
     ],
     "blurb": "Research methods, evaluation and 16-mark essays, planned and marked against the AQA levels by a former AQA examiner.",
@@ -273,6 +341,71 @@
     },
     "tutorInfo": {
       "Andy": "Nearly 30 years teaching A-level Psychology, and a former AQA examiner."
+    },
+    "detail": {
+      "introHeading": "A-level Psychology tutoring from a former AQA examiner",
+      "intro": [
+        "A-level Psychology rewards three different skills: knowing the content, applying it to an unfamiliar scenario, and evaluating it. Students who revise the content alone often find their marks stall. Andy has examined for AQA, and each lesson covers a topic in full and then puts it to work on exam questions, which he marks and goes over."
+      ],
+      "profile": {
+        "Andy": [
+          "Andy has taught A-level Psychology for nearly 30 years in top sixth form colleges. AQA is his specialism and he has been an AQA examiner, though he can teach every exam board.",
+          "He has a reputation for lessons that get to the point: the knowledge a question needs, the evaluation that reaches the top band, and how to use the scenario in application questions."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level Psychology",
+      "focus": [
+        {
+          "h": "Research methods",
+          "p": "Research methods is the most-examined area of the course: 445 of the 1,208 AQA question parts in our question bank since 2016. It includes the maths, from choosing a statistical test to interpreting significance, and it is where many students drop marks they could keep."
+        },
+        {
+          "h": "16-mark essays",
+          "p": "A 16-mark essay is about 20 minutes of writing, and the top level needs evaluation that is developed, not just listed. Evaluation that only describes stays in the lower levels. Andy marks essays the way an examiner does and shows what would lift each one."
+        },
+        {
+          "h": "Application questions",
+          "p": "Many questions give a short scenario and ask students to apply what they know to it. Marks are lost when the answer is correct psychology but never mentions the scenario. Lessons practise using the details in the question, line by line."
+        },
+        {
+          "h": "The updated specification",
+          "p": "AQA updated the Psychology specification for first A-level exams in June 2027. The papers and question types are the same, but some content has been removed or reworded. Andy teaches to the current specification, so revision time is not spent on material that has gone."
+        }
+      ],
+      "includesHeading": "What lessons with Andy include",
+      "includes": [
+        "One-to-one lessons for Year 12 and Year 13",
+        "Each topic covered in full, followed by exam-style questions that Andy marks and goes over",
+        "Essays marked with examiner-style feedback",
+        "Research methods and the maths that goes with it",
+        "Mock-paper walk-throughs before the summer exams"
+      ],
+      "faqs": [
+        {
+          "q": "Which A-level Psychology exam boards do you teach?",
+          "a": "Andy specialises in AQA A-level Psychology (7182) and AS (7181), where he has been an examiner. He can teach other exam boards too: tell us which when you get in touch."
+        },
+        {
+          "q": "Does the updated AQA specification affect my child?",
+          "a": "Yes, if they sit A-level exams from June 2027 onwards, which includes students now in Year 12 and Year 13. The paper structure and question types have not changed, but some content has been removed or reworded. Andy teaches to the current specification."
+        },
+        {
+          "q": "Can a tutor help with the maths in Psychology?",
+          "a": "Yes. Research methods and data handling come up on every paper, and the maths is the same few skills each time: choosing a statistical test, the sign test, significance and interpreting data. They can be learned and practised."
+        },
+        {
+          "q": "How much does an A-level Psychology tutor cost?",
+          "a": "Lessons with Andy are £100 an hour, online and one to one, paid after each lesson. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book a Psychology lesson?",
+          "a": "Choose a time in Andy’s calendar from this page. If you would rather ask a question first, message Tom on WhatsApp or send the enquiry form."
+        },
+        {
+          "q": "Is there free A-level Psychology revision material?",
+          "a": "Yes. Our free site, alevelpsychologytutor.com, has 1,208 question parts from 52 AQA papers since 2016, sorted by topic for the current specification, each with its mark scheme and the examiner’s comment. It also has every 16-mark essay title set and a timed essay tool. There is no sign-up."
+        }
+      ]
     }
   },
   {
@@ -314,7 +447,8 @@
         "board": "AQA",
         "short": "AQA",
         "codes": "7192 / 7191",
-        "path": "/"
+        "path": "/",
+        "papers": "Three 2-hour papers, 80 marks each. Paper 1: Education with Theory and Methods. Paper 2: Topics in Sociology (two options, 40 marks each). Paper 3: Crime and Deviance with Theory and Methods."
       }
     ],
     "blurb": "Theories, studies and essay technique for every AQA paper, taught by a former AQA examiner.",
@@ -325,6 +459,71 @@
     },
     "tutorInfo": {
       "Mark": "Over 25 years teaching A-level Sociology, head of a large department and a former AQA examiner."
+    },
+    "detail": {
+      "introHeading": "A-level Sociology tutoring from a former AQA examiner",
+      "intro": [
+        "In A-level Sociology, most students know the studies and the theories. What separates the grades is how that knowledge is used: applying the Item, building an argument and reaching a judgement. Mark has marked these papers for AQA, and his lessons are built around what the mark schemes reward."
+      ],
+      "profile": {
+        "Mark": [
+          "Mark has taught A-level Sociology for over 25 years and leads a very large and successful department. He has been an examiner for AQA, the board he knows best, and can teach every A-level Sociology specification.",
+          "He marks essays against the AQA levels and gives written feedback, so students can see exactly what would move an answer into the next band."
+        ]
+      },
+      "focusHeading": "Where marks are won and lost in A-level Sociology",
+      "focus": [
+        {
+          "h": "Using the Item",
+          "p": "The 10-mark “applying material from the Item” questions and most of the essays come with an Item. The top bands need the Item’s points picked up and developed alongside the student’s own knowledge. Ignoring it, or copying it out, keeps an answer in the middle."
+        },
+        {
+          "h": "30-mark essays",
+          "p": "Papers 1 and 3 each end in a 30-mark essay, about 45 minutes of writing. Listing studies is not enough: the top level asks for analysis and for evaluation that reaches a judgement. Mark teaches a structure students can rely on under time pressure."
+        },
+        {
+          "h": "Methods in Context",
+          "p": "This 20-mark question has appeared on every Paper 1 since 2017. It asks students to apply a research method to a particular issue in education. Answers that describe the method in general, without tying it to the issue, are held in the middle bands."
+        },
+        {
+          "h": "Theory and Methods",
+          "p": "Theory and Methods is examined on both Paper 1 and Paper 3, so it carries more marks than any single topic. Lessons link the theories to the topics students already know, which makes them easier to remember and to use in essays."
+        }
+      ],
+      "includesHeading": "What lessons with Mark include",
+      "includes": [
+        "One-to-one lessons for Year 12 and Year 13 at a regular weekly time",
+        "Essays marked against the AQA levels, with written feedback",
+        "Practice on Theory and Methods and Methods in Context",
+        "Education, Crime and Deviance and your school’s two Paper 2 options",
+        "Mock-paper walk-throughs before the summer exams"
+      ],
+      "faqs": [
+        {
+          "q": "Which A-level Sociology exam boards do you teach?",
+          "a": "Mark specialises in AQA A-level Sociology (7192) and AS (7191), where he has been an examiner. He also teaches Cambridge International AS and A Level Sociology (9699) and other specifications: tell us which when you get in touch."
+        },
+        {
+          "q": "Will Mark mark my essays?",
+          "a": "Yes. Essays are marked against the AQA level descriptors and returned with written feedback, then discussed in the next lesson."
+        },
+        {
+          "q": "When is the best time to start Sociology tutoring?",
+          "a": "Students start at every point in the course. Many begin after a disappointing mock, or in Year 13 when the 30-mark essays start to matter. Starting earlier leaves more time to practise essays and act on feedback."
+        },
+        {
+          "q": "How much does an A-level Sociology tutor cost?",
+          "a": "Lessons with Mark are £100 an hour, online and one to one, paid after each lesson. There is no registration fee and no package to buy."
+        },
+        {
+          "q": "How do we book a Sociology lesson?",
+          "a": "Choose a time in Mark’s calendar from this page. If you would rather ask a question first, message Tom on WhatsApp or send the enquiry form."
+        },
+        {
+          "q": "Is there free A-level Sociology revision material?",
+          "a": "Yes. Our free site, alevelsociologytutor.com, has 612 question parts from 48 AQA Sociology papers since 2016, sorted by topic, each with its Item, mark scheme and the examiner’s comment. It also lists every essay title set. There is no sign-up."
+        }
+      ]
     }
   },
   {
