@@ -6,11 +6,11 @@ import { joinList, acuityUrl, teamStats } from '../lib';
 const rows = subjects.flatMap((s: any) => s.tutors.map((t: string) => ({ t, s, info: s.tutorInfo?.[t], id: s.acuity?.[t] })));
 const { tutors, examiners, heads } = teamStats();
 ---
-<Base title="Our Online A-level Tutors: Teachers and Examiners" description={`Meet our ${tutors} online tutors: experienced A-level specialists, ${examiners} current or former exam board examiners and ${heads} heads of department.`}>
+<Base title="Meet Our Tutors: A-level Teachers and Examiners" description={`Meet our ${tutors} online tutors: experienced A-level specialists, ${examiners} current or former exam board examiners and ${heads} heads of department.`}>
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Tutors</div>
-      <h1>Our tutors</h1>
+      <h1>Meet our A-level tutors</h1>
       <p>Experienced specialists, not students. Most teach, or have taught, A level in sixth form colleges. {examiners} have marked A-level exams for the exam boards and {heads} have led a department.</p>
     </div>
   </section>

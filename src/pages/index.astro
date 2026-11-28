@@ -7,6 +7,7 @@ import WaIcon from '../components/WaIcon.astro';
 import subjects from '../data/subjects.json';
 import reviews from '../data/reviews.json';
 import { posts } from '../data/posts';
+import site from '../data/site.json';
 import { waGeneral, teamStats } from '../lib';
 
 const alevel = subjects.filter((s) => s.level !== 'GCSE');
@@ -20,7 +21,7 @@ const faqs = [
   { q: 'Is it too late to start?', a: 'Students start at every point in the course, including the last few months before the exams. Later in the year, lessons concentrate on the topics and question types that carry the most marks.' },
   { q: 'How do online lessons work?', a: 'Lessons are one to one on Zoom or Google Meet. Tutor and student work on the same slides, diagrams and exam questions, and every lesson is recorded so it can be watched again when revising.' },
   { q: 'Which exam boards do you teach?', a: `AQA, OCR, Pearson Edexcel, Eduqas and Cambridge International, across ${alevel.length} A-level subjects, plus GCSE Science. Each subject page lists the exact specifications.` },
-  { q: 'How do we book?', a: 'Each subject page has a button that opens the tutor’s calendar, so you can choose a time straight away. If you would rather talk it through first, message Tom on WhatsApp.' },
+  { q: 'How do we book?', a: 'Most subject pages have a button that opens the tutor’s calendar, so you can choose a time straight away. For Chemistry, or if you would rather talk it through first, message Tom on WhatsApp. A-level Biology is booked on alevelbiologytutor.com.' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -37,14 +38,14 @@ const ordered = [...reviews].sort((a, b) => (b.text.includes('Medicine') ? 1 : 0
 ---
 <Base
   title="Online A-level Tutors | Experienced Teachers and Examiners"
-  description="One-to-one online A-level tutoring with experienced teachers and examiners in 12 subjects. Lessons recorded. £100 an hour, paid after each lesson."
+  description={`One-to-one online A-level tutoring with experienced teachers and examiners in ${alevel.length} subjects. Lessons recorded. £100 an hour, paid after each lesson.`}
   schema={[faqSchema]}
 >
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Online A-level tutoring</div>
-        <h1>Experienced A-level teachers, one to one</h1>
+        <h1>Online A-level tutors: experienced teachers, one to one</h1>
         <p class="lead">When a university place depends on a grade, the right teacher makes a real difference. Our tutors are A-level specialists, heads of department and exam board examiners, and they know where marks are won and lost.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="/subjects/">Find a tutor</a>
@@ -134,7 +135,7 @@ const ordered = [...reviews].sort((a, b) => (b.text.includes('Medicine') ? 1 : 0
       <div class="section-head">
         <div class="eyebrow">Reviews</div>
         <h2>What parents and students say</h2>
-        <p class="muted">From our Google reviews.</p>
+        <p class="muted">From our <a href={site.googleReviews} rel="noopener">Google reviews</a>.</p>
       </div>
       <div class="grid grid-3">
         {ordered.map((r) => <ReviewCard r={r} />)}

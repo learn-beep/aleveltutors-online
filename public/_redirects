@@ -21,6 +21,13 @@
 /sociology                /online-a-level-sociology-tutor/      301
 /geography                /online-a-level-geography-tutor/      301
 /english                  /online-a-level-english-tutor/        301
+/law                      /online-a-level-law-tutor/            301
+/environmental-science    /online-a-level-environmental-science-tutor/  301
+/gcse-science             /online-gcse-science-tutor/           301
+
+# Renamed 28 Nov 2026
+/online-gcse-biology-tutor    /online-gcse-science-tutor/       301
+/online-gcse-biology-tutor/   /online-gcse-science-tutor/       301
 
 # Apex to www
 https://aleveltutors.online/*  https://www.aleveltutors.online/:splat  301!

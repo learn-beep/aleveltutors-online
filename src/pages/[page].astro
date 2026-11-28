@@ -21,6 +21,7 @@ const mine = reviews.filter((r) => r.subject.includes(s.name));
 const others = subjects.filter((x) => x.slug !== s.slug);
 const specHead = isGcse ? 'Specification' : 'Specification (A level / AS)';
 const course = isGcse ? 'GCSE' : 'A-level';
+const price = s.fee ? (s.fee.match(/£(\d+)/) ?? [])[1] : undefined;
 const service = {
   '@context': 'https://schema.org', '@type': 'Service',
   name: `Online ${s.label} tutoring`,
@@ -29,6 +30,7 @@ const service = {
   areaServed: 'GB',
   description: `One-to-one online ${s.label} tutoring for ${joinList(s.boards.map((b) => b.board))}.`,
   url: `${site.url}/${s.page}/`,
+  ...(price ? { offers: { '@type': 'Offer', price, priceCurrency: 'GBP', description: s.fee, url: `${site.url}/${s.page}/` } } : {}),
 };
 const crumbs = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
@@ -48,8 +50,10 @@ const cards = s.tutors.map((t) => ({ t, id: acu[t] }));
 const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after each lesson. ` : '';
 ---
 <Base
-  title={[`Online ${s.label} Tutor | ${joinList(boardNames)} | aleveltutors.online`, `Online ${s.label} Tutor | ${joinList(boardNames)}`, `Online ${s.label} Tutor | aleveltutors.online`, `Online ${s.label} Tutor`].find((t) => t.length <= 65)}
-  description={`One-to-one online ${s.label} tutoring for ${joinList(boardNames)} with ${joinList(s.tutors)}. ${feeLine}Every lesson recorded.`}
+  title={[`Online ${s.label} Tutor | ${joinList(boardNames)} | aleveltutors.online`, `Online ${s.label} Tutor | ${joinList(boardNames)}`, `Online ${s.label} Tutor | ${(s as any).titleBoards ?? ''}`, `Online ${s.label} Tutor | aleveltutors.online`, `Online ${s.label} Tutor`].find((t) => t.length <= 60)}
+  description={s.external
+    ? `Online ${s.label} tutoring for ${joinList(boardNames)} with Tom Whitburn: one-to-one lessons and weekly group masterclasses, booked on ${host(s.site!)}.`
+    : `One-to-one online ${s.label} tutoring for ${joinList(boardNames)} with ${joinList(s.tutors)}. ${feeLine}Every lesson recorded.`}
   schema={[service, crumbs]}
 >
   <section class="page-head">
@@ -61,7 +65,7 @@ const feeLine = s.fee ? `${s.fee[0].toUpperCase()}${s.fee.slice(1)}, paid after 
         {s.external && <a class="btn btn-primary" href={`${s.site}/`}>Book on {host(s.site!)}</a>}
         {book.map(([t, id]) => <a class="btn btn-primary" href={acuityUrl(id)}>Book with {t}</a>)}
         {!s.external && <a class="btn btn-wa" href={wa}><WaIcon /> Ask a question first</a>}
-        {s.site && <a class="btn btn-ghost" style="color:#fff" href={`${s.site}/`}>Free {s.name} revision ↗</a>}
+        {s.site && !s.external && <a class="btn btn-ghost" style="color:#fff" href={`${s.site}/`}>Free {s.name} revision ↗</a>}
       </div>
     </div>
   </section>

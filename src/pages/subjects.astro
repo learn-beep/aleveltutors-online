@@ -3,13 +3,14 @@ import Base from '../layouts/Base.astro';
 import SubjectCard from '../components/SubjectCard.astro';
 import LeadBlock from '../components/LeadBlock.astro';
 import subjects from '../data/subjects.json';
+const alevel = subjects.filter((s) => s.level !== 'GCSE').length;
 ---
-<Base title="A-level Subjects We Tutor Online | aleveltutors.online" description="Online A-level tutors in Maths, the Sciences, Psychology, Economics, Sociology, Geography, English, Law and more, for AQA, OCR, Edexcel and Eduqas.">
+<Base title="A-level Subjects We Tutor Online | aleveltutors.online" description="Online A-level tutors in Maths, the Sciences, Psychology, Economics, Sociology, Geography, English, Law and more, for AQA, OCR, Edexcel, Eduqas and Cambridge.">
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Subjects</div>
       <h1>A-level subjects we tutor</h1>
-      <p>{subjects.length} subjects, each taught by a specialist teacher. Most also have a free revision site for your exam board.</p>
+      <p>{alevel} A-level subjects and GCSE Science, each taught by a specialist teacher. Most also have a free revision site for your exam board.</p>
     </div>
   </section>
   <section class="block">

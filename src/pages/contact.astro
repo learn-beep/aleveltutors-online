@@ -42,11 +42,17 @@ import { waGeneral } from '../lib';
         <div class="row">
           <label>Year group
             <select name="year">
-              <option>Year 12</option><option>Year 13</option><option>Resitting</option><option>Other</option>
+              <option>Year 12</option><option>Year 13</option><option>Resitting</option><option>Year 11</option><option>Year 10</option><option>Other</option>
             </select>
           </label>
           <label>Phone (optional) <input name="phone" autocomplete="tel" /></label>
         </div>
+        <label>How did you find us? (optional)
+          <select name="source">
+            <option value="">Choose…</option>
+            <option>Google search</option><option>Recommendation</option><option>One of our free revision sites</option><option>School or college</option><option>Social media</option><option>Other</option>
+          </select>
+        </label>
         <label>What would you like help with? Best times for lessons?
           <textarea name="message" rows="5"></textarea>
         </label>

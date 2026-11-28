@@ -285,6 +285,7 @@
     "slug": "english",
     "name": "English",
     "page": "online-a-level-english-tutor",
+    "titleBoards": "AQA Language and Literature",
     "site": "https://www.alevelenglishtutor.com",
     "tutors": [
       "Isobel"
@@ -381,7 +382,7 @@
     "name": "GCSE Science",
     "label": "GCSE Science",
     "level": "GCSE",
-    "page": "online-gcse-biology-tutor",
+    "page": "online-gcse-science-tutor",
     "site": "https://www.sciencegcsetutor.com",
     "tutors": [
       "Sam"

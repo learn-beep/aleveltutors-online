@@ -6,5 +6,13 @@
   "company": "aleveltutors.online Limited",
   "companyNumber": "14401016",
   "office": "5 Northbrook Court, Northbrook Avenue, Winchester SO23 0JP",
-  "googleReviews": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21WR09WaHNYMHhOWkhWNFRXcGhTRkJUZFcxc1pIYxAB!2m1!1s0x0:0x98c3ef8a6b374e4!3m1!1s2@1:CAIQACodChtycF9oOmVGOVhsX0xNZHV4TWphSFBTdW1sZHc%7C%7C"
+  "googleReviews": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21WR09WaHNYMHhOWkhWNFRXcGhTRkJUZFcxc1pIYxAB!2m1!1s0x0:0x98c3ef8a6b374e4!3m1!1s2@1:CAIQACodChtycF9oOmVGOVhsX0xNZHV4TWphSFBTdW1sZHc%7C%7C",
+  "phone": "+447888786687",
+  "founder": "Tom Whitburn",
+  "address": {
+    "street": "5 Northbrook Court, Northbrook Avenue",
+    "locality": "Winchester",
+    "postcode": "SO23 0JP"
+  },
+  "profiles": []
 }

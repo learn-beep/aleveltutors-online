@@ -3,12 +3,23 @@ import Base from '../layouts/Base.astro';
 import LeadBlock from '../components/LeadBlock.astro';
 import subjects from '../data/subjects.json';
 const rows = subjects.filter((s) => s.fee).flatMap((s) => s.tutors.map((t) => ({ t, s })));
+const faqs = [
+  { q: 'How much does an A-level tutor cost?', a: 'Most of our lessons are £100 an hour. Further Maths with Emma is £110 an hour, and Maths with Tania is £75 for a 45-minute lesson. There is no registration fee and no package to buy.' },
+  { q: 'How does payment work?', a: 'A card secures the booking and is charged after each lesson, not before. There is no contract. If you need to move a lesson, give the tutor reasonable notice. If you decide to stop, you simply don’t book the next one.' },
+  { q: 'What does the fee include?', a: 'A one-to-one lesson with an experienced specialist in your exam board, a recording of the lesson to watch again, resources before the lesson, the chance to send in questions you got stuck on, and free use of our revision sites between lessons.' },
+  { q: 'How many lessons will we need?', a: 'It depends on where things stand. Some students come for a few lessons to sort out one topic or prepare for a mock. Most keep a weekly lesson through Year 13. After the first lesson or two, ask your tutor what they would recommend.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
 ---
-<Base title="How Much Does an A-level Tutor Cost? Our Fees | aleveltutors.online" description="Our online A-level tutoring fees: £100 an hour for most subjects, paid after each lesson. No registration fee, no packages, no contract.">
+<Base title="How Much Does an A-level Tutor Cost? Our Fees | aleveltutors.online" description="Our online A-level tutoring fees: £100 an hour for most subjects, paid after each lesson. No registration fee, no packages, no contract." schema={[faqSchema]}>
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Fees</div>
-      <h1>Fees</h1>
+      <h1>A-level tutoring fees</h1>
       <p>Most lessons are £100 an hour. You pay after each lesson, and there is nothing else to pay.</p>
     </div>
   </section>

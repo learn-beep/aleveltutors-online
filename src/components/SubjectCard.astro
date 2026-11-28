@@ -11,5 +11,6 @@ const { s } = Astro.props;
     <a href={`/${s.page}/`}>Tutoring</a>
     {s.site && <a href={`${s.site}/`}>{s.external ? host(s.site) : 'Free revision site'} ↗</a>}
     {s.acuity && Object.keys(s.acuity).length === 1 && <a href={acuityUrl(Object.values(s.acuity)[0] as number)}>Book online ↗</a>}
+    {s.acuity && Object.keys(s.acuity).length > 1 && (Object.entries(s.acuity) as [string, number][]).map(([t, id]) => <a href={acuityUrl(id)}>Book with {t} ↗</a>)}
   </div>
 </article>
